@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Bernice Wong's Design Portfolio - NetEase Games</title>
+    	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    	<link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
+    	<link rel="stylesheet" href="assets/css/style.css">
+        <link rel="icon" type="image/png" href="assets/img/Logo.png"/>
+
+		<script src="https://kit.fontawesome.com/2abffad84e.js" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src = "assets/js/script.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+   		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+
+	</head>
+
+	<body>
+
+		<!--Mobile Side Navigation Bar-->
+		<div class = "mobile-navigation-dropdown" id = "dropdown">
+				<div class = "dropdown-item" id = "header">
+					<div class = "logo">Bernice Ka Hay Wong</div>
+					<div class = "close-button">
+						<i class="fas fa-times"></i>
+					</div>
+				</div>
+				<div class = "dropdown-item">
+					<a class = "item" href="index.html">Home</a>
+				</div>
+<!-- 				<div class = "dropdown-item">
+					<a class = "item" href="about.html">About</a>
+				</div> -->
+				<div class = "dropdown-item">
+					<a class = "item" href="Bernice-Wong-Resume.pdf" target = "_blank">Resume</a>
+				</div>
+		</div>
+
+		<div class = "nav-container">
+		<!--Desktop Navigation Bar-->
+			<div class = "navigation-parent">
+				<div class = "flexible-navigation-bar">
+
+					<!--always on left-->
+					<div class = "left-bar-container">
+						<a class = "social-media-icon" id = "twitter" onclick = "parent.open('https://twitter.com/bernicekahay')">
+							<i class="fab fa-twitter"></i>
+						</a>
+						<a class = "social-media-icon" id = "github" onclick = "parent.open('https://www.linkedin.com/in/bernice-wong')">
+							<i class="fab fa-linkedin-in"></i>
+						</a>
+						<a class = "social-media-icon" id = "github" onclick = "parent.open('https://github.com/bernicekahay')">
+							<i class="fab fa-github"></i>
+						</a>
+					</div>
+
+					<!--always on center-->
+					<div class = "middle-bar-container">
+						<div class = "logo">Bernice Ka Hay Wong</div>
+					</div>
+
+					<!--always on right-->
+					<div class = "right-bar-container">
+						<div class = "desktop-navigation">
+							<div class = "nav-item">
+								<a href="index.html">Home</a>
+							</div>
+<!-- 							<div class = "nav-item">
+								<a href="index.html">About</a>
+							</div> -->
+							<div class = "nav-item">
+								<a href="Bernice-Wong-Resume.pdf" target = "_blank">Resume</a>
+							</div>
+						</div>
+						<div class = "toggle-icon" id = "toggle">
+							<i class="fas fa-bars"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--Main Featured Banner-->
+		<div class = "project-page-container">
+			<div class = "project-featured-banner-container" id = "netease-featured"></div>
+			<div class = "project-featured-wrapper">
+				<div class = "project-logo" id = "netease-logo">
+					<img draggable = "false" src = "assets/img/netease/logo.png">
+				</div>
+				<div class = "project-description" id = "netease-project-description">Mage Supreme was a mobile battle royale game intended to be the first Western-rooted game from NetEase Games. I was brought on to aid the product team shortly before the launch of the game's Closed Beta Testing. I directly contributed to the overall development and polish of the game, leading the redesign of various game flows and creating interfaces, animations, artwork, and icons for key features. The game was released for Closed Beta Testing in two countries, Canada and Brazil. Unfortunately the project was cancelled shortly afterwards, but some of my work is still viewable below.</div>
+				<div class = "general-video-container" id = "netease-video">
+					<iframe width="100%" height="400px" src="https://www.youtube.com/embed/euJLd8D0Zmw?controls=0&autoplay=1&mute=1&loop=1&showinfo=0&rel=0&modestbranding=1&autohide=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+			</div>
+
+
+		<!-- Navigation & Flow Container-->
+		<div class = "image-background-container" id = "netease-image-background">
+		 	<div class = "general-container" id = "image-background-container">
+				<div class = "section-header" id = "nav-flow-header">Navigation & Flow</div>
+		 		<div class = "section-description" id = "nav-flow-description">I reworked much of the flow and navigation of various features to improve interaction clarity and to account for previously missed states. One of the heaviest features that needed UX revisiting was the battle flow, a core part of the game. I closely collaborated with Games Designers, UX Researchers, and the lead UX/UI Designer to create prototypes and conduct internal usability tests in order to identify the most successful solutions that improved the usability of different parts of the game experience.</div>
+		 	</div>
+		 	<div class = "image-background-photo-wrapper">
+		 		<div class = "photo netease-nav-flow-photo" id = "netease-photo-one">
+					<img draggable = "false" id = "mobile-image" src = "assets/img/netease/defeat.png">
+	 			</div>		 			
+	 			<div class = "photo netease-nav-flow-photo" id = "netease-photo-two">
+		 			<img draggable = "false" id = "mobile-image" src = "assets/img/netease/find_ally.png">
+		 		</div>
+		 		<div class = "photo netease-nav-flow-photo" id = "netease-photo-three">
+		 			<img draggable = "false" id = "mobile-image" src = "assets/img/netease/battle3.png">
+				</div>
+	 			<div class = "photo netease-nav-flow-photo" id = "netease-photo-four">
+	 				<img draggable = "false" id = "mobile-image" src = "assets/img/netease/rankings.png">
+				</div>
+		 		<div class = "photo netease-nav-flow-photo" id = "netease-photo-five">
+					<img draggable = "false" id = "mobile-image" src = "assets/img/netease/battle1.png">
+	 			</div>
+	 		</div>
+		 </div>
+
+		<!-- Wireframe Container -->
+			<div class = "general-container before-after" id = "netease-wires-container">
+				<div class = "section-header" id = "netease-wires-header">Wireframes</div>
+		 		<div class = "section-description" id = "netease-wires-description">After mapping out the flow, I'd create low-fi wires to high-fi mocks used to prototype design layouts and interactions and to be reviewed by engineering. I'd also implement my designs directly into Unity and iterated based on playtesting feedback.</div>
+
+ 				<div class = "before-after-container">
+ 					<div class = "small-card-dropdown">
+ 						<div class = "small-card-dropdown-button">
+ 							<div class = "dropdown-text">Select a view</div>
+							<i class="fas fa-angle-down fa-2x"></i>
+						</div>
+						<div class = "small-card-dropdown-list">
+							<div class = "small-card-dropdown-item" id = "sm-card-item-1">Achievements</div>
+							<div class = "small-card-dropdown-item" id = "sm-card-item-2">Friend's List</div>
+							<div class = "small-card-dropdown-item" id = "sm-card-item-3">Daily Quests</div>
+						</div>
+ 					</div>
+		 			<div class = "before-after-wrapper" id = "wrapper1">
+		 				<div class = "before-after-status-wrapper">
+		 					<div class = "before-after-status" id = "before-status1">BEFORE</div>
+		 					<div class = "before-after-status" id = "after-status1">AFTER</div>
+		 				</div>
+		 				<div class = "before-after-image-wrapper">
+		 					<div class = "handle" id = "handle1">
+		 						<div class = "handle-circle">
+		 							<div class = "triangle-left"></div>
+		 							<div class = "triangle-right"></div>
+		 						</div>
+		 					</div>
+		 					<div class = "before-after-image">
+		 						<img draggable = "false" src = "assets/img/netease/achievements_mock.png">
+		 					</div>
+		 					<div class = "before-after-image" id = "old1">
+		 						<img draggable = "false" src = "assets/img/netease/achievements_wire.png">
+		 					</div>
+		 				</div>
+		 				<div class = "before-after-label">Achievements</div>
+			 		</div>
+
+			 		<div class = "before-after-wrapper" id = "wrapper2">
+		 				<div class = "before-after-status-wrapper">
+		 					<div class = "before-after-status" id = "before-status2">BEFORE</div>
+		 					<div class = "before-after-status" id = "after-status2">AFTER</div>
+		 				</div>
+		 				<div class = "before-after-image-wrapper">
+		 					<div class = "handle" id = "handle2">
+		 						<div class = "handle-circle">
+		 							<div class = "triangle-left"></div>
+		 							<div class = "triangle-right"></div>
+		 						</div>
+		 					</div>
+		 					<div class = "before-after-image">
+		 						<img draggable="false" src = "assets/img/netease/friends_list_mock.png">
+		 					</div>
+		 					<div class = "before-after-image" id = "old2">
+		 						<img draggable="false" src = "assets/img/netease/friends_list_wire.png">
+		 					</div>
+		 				</div>
+		 				<div class = "before-after-label">Friend's List</div>
+			 		</div>
+
+			 		<div class = "before-after-wrapper" id = "wrapper3">
+		 				<div class = "before-after-status-wrapper">
+		 					<div class = "before-after-status" id = "before-status3">BEFORE</div>
+		 					<div class = "before-after-status" id = "after-status3">AFTER</div>
+		 				</div>
+		 				<div class = "before-after-image-wrapper">
+		 					<div class = "handle" id = "handle3">
+		 						<div class = "handle-circle">
+		 							<div class = "triangle-left"></div>
+		 							<div class = "triangle-right"></div>
+		 						</div>
+		 					</div>
+		 					<div class = "before-after-image">
+		 						<img draggable="false" src = "assets/img/netease/daily_quests_mock.png">
+		 					</div>
+		 					<div class = "before-after-image" id = "old3">
+		 						<img draggable="false" src = "assets/img/netease/daily_quests_wire.png">
+		 					</div>
+		 				</div>
+		 				<div class = "before-after-label">Daily Quests</div>
+			 		</div>
+		 		</div>
+		 	</div>
+
+<!-- Large Card Container-->
+		 	<div class = "desktop-container" id = "netease-container">
+				<div class = "desktop-section-wrapper-two">
+				 	<div class = "desktop-section-left-two">
+					 	<div class = "desktop-section-image" id = "netease-images">
+						 	<div class = "desktop-image desktop-image-style-two netease-desktop-image">
+					 			<img draggable = "false" id = "mobile-image" src = "assets/img/netease/general.png">
+					 		</div>
+						 	<div class = "desktop-image desktop-image-style-two netease-desktop-image">
+					 			<img draggable = "false" id = "mobile-image" src = "assets/img/netease/main_menu.png">
+					 		</div>
+						 	<div class = "desktop-image desktop-image-style-two netease-desktop-image">
+					 			<img draggable = "false" id = "mobile-image" src = "assets/img/netease/ftue.png">
+					 		</div>
+						 	<div class = "desktop-image desktop-image-style-two netease-desktop-image">
+					 			<img draggable = "false" id = "mobile-image" src = "assets/img/netease/progression.png">
+					 		</div>
+						 	<div class = "desktop-image desktop-image-style-two netease-desktop-image">
+					 			<img draggable = "false" id = "mobile-image" src = "assets/img/netease/battle.png">
+					 		</div>
+			 			</div>
+			 		</div>
+
+			 		<div class = "desktop-section-right-two">
+			 			<div class = "desktop-section-right-two-content">
+			 				<div class = "desktop-content" id = "desktop-netease-content">
+				 				<div class = "section-header section-header-white">Mocks & Implementation</div>
+					 			<div class = "desktop-description-wrapper">
+					 				<div class = "desktop-section-description netease-desktop-description">
+					 					Throughout my time at NetEase, I worked on many features into the game pushing for improved holistic and user-centric redesigns and applying those modifications to across-the-sea deliverables. I worked closely with engineers, game designers, and UX researchers to identify the pain points and deliver solutions with the appropriate intent.
+						 				<br><br>
+						 				I also had an active role in directly implementing many designs and assets into Unity. I created assets from scratch, modified pre-existing assets, and created animations. Overall, I brought a more player-focused support and approach to the project to bridge the adjustments needed between the US and China studios.
+					 				</div>
+					 				<div class = "desktop-section-description netease-desktop-description">
+						 				The Main Menu was the user’s main entry point to the game, allowing the player to navigate to the two primary modes of battle (Solo or Duo), Quests, Friend's List, Settings, Inbox, Character Collection, Progression, Character Information, and Spectator Mode.
+						 				<br><br>
+						 				Because the Main Menu was an integral hub to so many other features, I spent a lot of my time identifying holistic flow and navigational issues and making HUD improvements. Through internal testing and collaborating with other departments, I worked towards a more simplified flow and created states for missing cases. I also implemented UI directly into Unity.
+					 				</div>
+					 				<div class = "desktop-section-description netease-desktop-description">
+						 				I created FTUE (First Time User Experience) Loading screens to tutorialize basic aspects of the game. These screens intended to onboard the players about Battle Royale Basics, Controls, Equipping Items, Progression Basics, and Character Introductions.
+						 				<br><br>
+						 				I worked closely with the Lead Artist to gather the appropriate assets, then modified them with existing assets to make them more readable and instructional. After review approval from Game Designers, I laid out the UI in Unity and implemented the screens into the game.
+					 				</div>
+					 				<div class = "desktop-section-description netease-desktop-description">
+						 				I worked on the designs of the progression system, where the player keeps track of unlocking new abilities and spells. Each character class had it’s own set of ‘lessons’ to learn new skills, and each lesson had different states and CTA's such as its Default, Locked, In-Progress, Ready-To-Claim, or Collected state.
+						 				<br><br>
+						 				I implemented the visualizations for each progression state, created icons that represented all 9 subclasses, implemented lesson and scroll animations, and laid out the UI for related popups such as confirmation screens and more detailed ability views.
+					 				</div>
+					 				<div class = "desktop-section-description netease-desktop-description">
+						 				Since battle was such a core part of the gameplay, I led initiatives to simplify a pre-existing complex battle flow with UX Researchers and Game Designers through internal usability tests. This included improving the accessibility of controls such as quick chatting in battle, and clarity issues between transitioning from multiple battle views (from in-game play to spectate mode).
+						 				<br><br>
+						 				I also tackled multiplayer flows like party management and interacting with friends in battle. I worked with engineers to implement and modify much of the battle UI with improved utility. We held weekly playtests and I’d continue iterating the battle UI based on feedback.
+					 				</div>
+					 			</div>
+				 			</div>
+
+				 		<div class = "desktop-section-navigation-tabs">
+				 			<div class = "desktop-nav-style-line-two" id = "desktop-netease-line"></div>
+				 			<div class = "desktop-navigation-tabs">
+					 			<div class = "desktop-nav-item">
+					 				<div class = "desktop-nav-tab netease-nav-tab">
+					 					<div class = "desktop-nav-outer netease-nav-outer"></div>
+					 					<div class = "desktop-nav-inner netease-nav-inner"></div>
+					 				</div>
+					 				<div class = "desktop-nav-line netease-desktop-nav-line"></div>
+					 				<div class = "desktop-nav-label netease-desktop-nav-label">GENERAL</div>
+					 			</div>
+					 			<div class = "desktop-nav-item">
+					 				<div class = "desktop-nav-tab netease-nav-tab">
+					 					<div class = "desktop-nav-outer netease-nav-outer"></div>
+					 					<div class = "desktop-nav-inner netease-nav-inner"></div>
+					 				</div>
+					 				<div class = "desktop-nav-line netease-desktop-nav-line"></div>
+					 				<div class = "desktop-nav-label netease-desktop-nav-label">MAIN MENU</div>
+					 			</div>
+					 			<div class = "desktop-nav-item">
+					 				<div class = "desktop-nav-tab netease-nav-tab">
+					 					<div class = "desktop-nav-outer netease-nav-outer"></div>
+					 					<div class = "desktop-nav-inner netease-nav-inner"></div>
+					 				</div>
+					 				<div class = "desktop-nav-line netease-desktop-nav-line"></div>
+					 				<div class = "desktop-nav-label netease-desktop-nav-label">FTUE</div>
+					 			</div>
+					 			<div class = "desktop-nav-item">
+					 				<div class = "desktop-nav-tab netease-nav-tab">
+					 					<div class = "desktop-nav-outer netease-nav-outer"></div>
+					 					<div class = "desktop-nav-inner netease-nav-inner"></div>
+					 				</div>
+					 				<div class = "desktop-nav-line netease-desktop-nav-line"></div>
+					 				<div class = "desktop-nav-label netease-desktop-nav-label">PROGRESSION</div>
+					 			</div>
+					 			<div class = "desktop-nav-item">
+					 				<div class = "desktop-nav-tab netease-nav-tab">
+					 					<div class = "desktop-nav-outer netease-nav-outer"></div>
+					 					<div class = "desktop-nav-inner netease-nav-inner"></div>
+					 				</div>
+					 				<div class = "desktop-nav-line netease-desktop-nav-line"></div>
+					 				<div class = "desktop-nav-label netease-desktop-nav-label">BATTLE</div>
+					 			</div>
+					 		</div>
+				 		</div>
+			 			</div>
+			 		</div>
+			 	</div>
+		 	</div>
+
+			<div class = "mobile-container" id = "netease-mobile">
+				<div class = "section-header section-header-white">Mocks & Implementation</div>
+				 <div class = "home-gradient-one">
+				 	<div class = "mobile-horizontal-item netease-mobile-nav-label">GENERAL</div>
+				 	<div class = "mobile-horizontal-item netease-mobile-nav-label">MAIN MENU</div>
+				 	<div class = "mobile-horizontal-item netease-mobile-nav-label">FTUE</div>
+				 	<div class = "mobile-horizontal-item netease-mobile-nav-label">PROGRESSION</div>
+				 	<div class = "mobile-horizontal-item netease-mobile-nav-label">BATTLE</div>
+			 	</div>
+
+			 	<div class = "section-content">
+			 		<div class = "content-item netease-mobile-content">
+						<div class = "section-description section-description-white">Throughout my time at NetEase, I designed and implemented many features into the game. A large part of my time was spent pushing for improved holistic and user-centric redesigns and applying those modifications to across-the-sea deliverables. I worked closely with engineers, game designers, and UX researchers to identify the pain points and deliver solutions with the appropriate intent.</div>
+		 				<div class = "home-mobile-image">
+		 					<img draggable = "false" id = "mobile-image" src = "assets/img/netease/general.png">
+			 			</div>
+			 		</div>
+			 		<div class = "content-item netease-mobile-content">
+			 			<div class = "section-description section-description-white">Because the Main Menu was an integral hub to so many other features, I spent a lot of my time identifying holistic flow and navigational issues and making HUD improvements. Through internal testing and collaborating with other departments, I worked towards a more simplified flow and created states for missing cases. I also implemented UI directly into Unity.</div>
+						<div class = "home-mobile-image">
+		 					<img draggable = "false" id = "mobile-image" src = "assets/img/netease/main_menu.png">
+		 				</div>
+		 			</div>
+		 			<div class = "content-item netease-mobile-content">
+		 				<div class = "section-description section-description-white">I created FTUE (First Time User Experience) Loading screens to tutorialize basic aspects of the game. I worked closely with the Lead Artist to gather the appropriate assets, then modified them with existing assets to make them more readable and instructional. After review approval from Game Designers, I laid out the UI in Unity and implemented the screens into the game.</div>
+			 			<div class = "home-mobile-image">
+			 				<img draggable = "false" id = "mobile-image" src = "assets/img/netease/ftue.png">
+			 			</div>
+			 		</div>
+					<div class = "content-item netease-mobile-content">
+		 				<div class = "section-description section-description-white">I worked on the designs of the progression system, where the player keeps track of unlocking new abilities and spells. I implemented the visualizations for each progression state, created icons that represented all 9 subclasses, implemented lesson and scroll animations, and laid out the UI for related popups such as confirmation screens and more detailed ability views.</div>
+		 				<div class = "home-mobile-image">
+		 					<img draggable = "false" id = "mobile-image" src = "assets/img/netease/progression.png">
+		 				</div>
+		 			</div>
+					<div class = "content-item netease-mobile-content">
+		 				<div class = "section-description section-description-white">I led initiatives to simplify a pre-existing complex battle flow with UX Researchers and Game Designers through internal usability tests. This included improving the accessibility of controls such as quick chatting in battle, and clarity issues between transitioning from multiple battle views (from in-game play to spectate mode). I also tackled multiplayer flows like party management and interacting with friends in battle.</div>
+		 				<div class = "home-mobile-image">
+		 					<img draggable = "false" id = "mobile-image" src = "assets/img/netease/battle.png">
+		 				</div>
+		 			</div>
+			 	</div>
+		 	</div>
+
+				<div class = "more-image-container" id = "netease-more-image-container">
+		 			<div class = "general-container">
+			 			<div class = "section-header" id = "netease-more-header">And More!</div>
+						<div class = "section-description" id = "netease-more-description">During the 6 months I was with NetEase there were a range of other features and experiences I got to participate in. From creating other key screens, to helping with external user testing, to bringing in board games, and helping coordinate the yearly Halloween Party. Although the game never launched, I met some amazing and talented folks.</div>
+		 			</div>
+		 			<div class = "more-image-wrapper">
+		 				<div class = "photo netease-more-image-photo" id = "one-photo">
+			 				<img draggable = "false" id = "mobile-image" src = "assets/img/netease/char_info.png">
+		 				</div>
+		 				<div class = "photo netease-more-image-photo" id = "two-photo">
+		 					<img draggable = "false" id = "mobile-image" src = "assets/img/netease/mage_collection.png">
+		 				</div>
+		 				<div class = "photo netease-more-image-photo" id = "three-photo">
+		 					<img draggable = "false" id = "mobile-image" src = "assets/img/netease/battle_watching.png">
+		 				</div>
+		 				<div class = "photo netease-more-image-photo" id = "four-photo">
+		 					<img draggable = "false" id = "mobile-image" src = "assets/img/netease/ftue_equipping.png">
+		 				</div>
+		 				<div class = "photo netease-more-image-photo" id = "five-photo">
+		 					<img draggable = "false" id = "mobile-image" src = "assets/img/netease/char_select.png">
+		 				</div>
+		 				<div class = "photo netease-more-image-photo" id = "six-photo">
+		 					<img draggable = "false" id = "mobile-image" src = "assets/img/netease/name.png">
+		 				</div>
+		 				<div class = "photo netease-more-image-photo" id = "seven-photo">
+		 					<img draggable = "false" id = "mobile-image" src = "assets/img/netease/studying.png">
+		 				</div>
+		 				<div class = "photo netease-more-image-photo" id = "eight-photo">
+		 					<img draggable = "false" id = "mobile-image" src = "assets/img/netease/settings.png">
+		 				</div>
+		 				<div class = "photo netease-more-image-photo" id = "nine-photo">
+		 					<img draggable = "false" id = "mobile-image" src = "assets/img/netease/detailed_lesson.png">
+		 				</div>
+		 			</div>
+		 		</div>
+
+		</div>
+
+
+
+		 <div class = "footer">© 2021 Bernice Wong | All Rights Reserved</div>
+
+	
+	</body>
+</html>

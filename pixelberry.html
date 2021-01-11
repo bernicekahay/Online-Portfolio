@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Bernice Wong's Design Portfolio - Pixelberry Studios</title>
+    	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    	<link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
+    	<link rel="stylesheet" href="assets/css/style.css">
+        <link rel="icon" type="image/png" href="assets/img/Logo.png"/>
+		<script src="https://kit.fontawesome.com/2abffad84e.js" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src = "assets/js/script.js"></script>
+
+        <script src = "assets/js/parallax.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+   		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+	</head>
+
+	<body>
+
+		<!--Mobile Side Navigation Bar-->
+		<div class = "mobile-navigation-dropdown" id = "dropdown">
+				<div class = "dropdown-item" id = "header">
+					<div class = "logo">Bernice Ka Hay Wong</div>
+					<div class = "close-button">
+						<i class="fas fa-times"></i>
+					</div>
+				</div>
+				<div class = "dropdown-item">
+					<a class = "item" href="index.html">Home</a>
+				</div>
+<!-- 				<div class = "dropdown-item">
+					<a class = "item" href="about.html">About</a>
+				</div> -->
+				<div class = "dropdown-item">
+					<a class = "item" href="Bernice-Wong-Resume.pdf" target = "_blank">Resume</a>
+				</div>
+		</div>
+
+		<div class = "nav-container">
+		<!--Desktop Navigation Bar-->
+			<div class = "navigation-parent">
+				<div class = "flexible-navigation-bar">
+
+					<!--always on left-->
+					<div class = "left-bar-container">
+						<a class = "social-media-icon" id = "twitter" onclick = "parent.open('https://twitter.com/bernicekahay')">
+							<i class="fab fa-twitter"></i>
+						</a>
+						<a class = "social-media-icon" id = "github" onclick = "parent.open('https://www.linkedin.com/in/bernice-wong')">
+							<i class="fab fa-linkedin-in"></i>
+						</a>
+						<a class = "social-media-icon" id = "github" onclick = "parent.open('https://github.com/bernicekahay')">
+							<i class="fab fa-github"></i>
+						</a>
+					</div>
+
+					<!--always on center-->
+					<div class = "middle-bar-container">
+						<div class = "logo">Bernice Ka Hay Wong</div>
+					</div>
+
+					<!--always on right-->
+					<div class = "right-bar-container">
+						<div class = "desktop-navigation">
+							<div class = "nav-item">
+								<a href="index.html">Home</a>
+							</div>
+	<!-- 						<div class = "nav-item">
+								<a href="index.html">About</a>
+							</div> -->
+							<div class = "nav-item">
+								<a href="Bernice-Wong-Resume.pdf" target = "_blank">Resume</a>
+							</div>
+						</div>
+						<div class = "toggle-icon" id = "toggle">
+							<i class="fas fa-bars"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--Main Featured Banner-->
+		<div class = "project-page-container">
+			<div class = "project-featured-banner-container" id = "pixelberry-featured"></div>
+			<div class = "project-featured-wrapper">
+				<div class = "project-logo" id = "pixelberry-logo">
+					<img draggable = "false" src = "assets/img/pixelberry/logo.png">
+				</div>
+				<div class = "project-description" id = "pixelberry-project-description">My time at Pixelberry Studios was full of fun and exciting endeavors. As a designer, I worked with the team that supports the Top Grossing 100 mobile game <i><b>Choices: Stories You Play</b></i>, other ‘more secretive’ projects, and lead higher internal design departmental initiatives and responsibilites. From spearheading UXR methods, to making production process improvements and advocating for holistic user-focused design directions, I worked closely with many departments to design, launch, and maintain various external features and internal tools, and figuring out how to best reach teamwide alignment in doing so. Feel free to check out some the work I did below!</div>
+				<div class = "project-two-button-wrapper">
+					<a class = "button button-clipped" id = "pb-ios-button" target = "_blank" href="https://apps.apple.com/us/app/choices-stories-you-play/id1071310449">
+						<i class = "fab fa-apple fa-2x"></i>
+						View on iOS
+					</a>
+					<div class = "project-two-button-gap"></div>
+					<a class = "button button-clipped" id = "pb-android-button" target = "_blank" href="https://play.google.com/store/apps/details?id=com.pixelberrystudios.choices&hl=en_US&gl=US">
+						<i class = "fab fa-android fa-2x"></i>
+						View on Android
+					</a>
+				</div>
+			</div>
+
+			<div class = "pixelberry-image-wrapper">
+				<div class = "pb-image" id = "pb-image-left">
+		 			<img draggable = "false" src = "assets/img/pixelberry/lc_choices.png">
+		 		</div>
+		 		<div class = "pb-image" id = "pb-image-middle">
+		 			<img draggable = "false" src = "assets/img/pixelberry/featured_choices.png">
+		 		</div>
+		 		<div class = "pb-image" id = "pb-image-right">
+		 			<img draggable = "false" src = "assets/img/pixelberry/browse_choices.png">
+		 		</div>
+			</div>
+
+			<div class = "pb-desktop-gradient-color"></div>
+
+			<div class = "desktop-container" id = "pb-vip-desktop">
+				<div class = "desktop-section-wrapper">
+			 		<div class = "desktop-section-left">
+			 			<div class = "desktop-content" id = "desktop-vip-content">
+				 			<div class = "section-header section-header-white">VIP Subscription</div>
+				 			<div class = "desktop-description-wrapper">
+				 				<div class = "desktop-section-description vip-desktop-description">
+					 				I lead the holistic review and documentation of the feature's design throughout the production process, fronting the coordination with engineers, QA, and other designers to communicate various subsystems and resolving upcoming issues during development and launch. <a href="https://www.pixelberrystudios.com/blog/2020/7/21/vip-access" id = "hyperlink" target = "_blank"><i><u>You can read more about VIP Access here!</u></i></a>
+					 				<br><br>
+					 				Since the feature's early beginnings, I worked closely with the Head of Design to map out the initial flow of our VIP subscription model. We conducted research and rapid iteration through numerous paper prototypes and internal user testing sessions. I also designed and created mocks, prototypes, and implemented visual assets and animations within our game's engine for the feature.
+				 				</div>
+				 				<div class = "desktop-section-description vip-desktop-description">
+					 				There was a large amount of research done for the design of this feature. Instead of starting with lo-fi wires and prototypes, we chose to move quicker with our iterations and data gathering through paper prototypes. Working with paper allowed us greater flexibility to play with flows and implement feedback changes directly on the spot.
+					 				<br><br>
+					 				We conducted various internal user testing sessions with the paper prototypes, and continued resolving clarity, feel, and conceptual issues with each iteration. Overall this process was extremely enlightening and fun!
+				 				</div>
+				 				<div class = "desktop-section-description vip-desktop-description">
+					 				Since the subscription model affects a large aspect of the app, there were a lot of separate flows and systems of the design that needed to be identified, connected, and mapped out. Working with the Design Head, we designed these complex systems towards one holistic model while tweaking our work based on the feedback we’d get from our testing sessions along the way.
+					 				<br><br>
+					 				Once we finished with our research and ideations, I lead the review, organization, and communication of the VIP design systems between multiple departments throughout the development process. I remained the owner of overseeing the high-level design system of this feature and resolving upcoming issues throughout launch.
+				 				</div>
+				 				<div class = "desktop-section-description vip-desktop-description">
+					 				In addition to researching and designing the subscription skeleton model, I created documentation, user diagrams, feature boards, and prototypes to communicate the design intent, logic, and dependencies of the different systems across the entire team.
+					 				<br><br>
+					 				I worked with other designers to organize visual assets, and designed and implemented animations to improve the feel of the user’s key ‘VIP’ experience. I was also the primary designer responsible for testing the feature during development so that it upheld the intended design quality.
+				 				</div>
+				 				<div class = "desktop-section-description vip-desktop-description">
+					 				To make the VIP experience pop, I designed various transitions and animations for key points of the subscription flow. This included animating assets, playing with particle effects, and experimenting with adding motion to static parts of the screen. All this was done to use motion to guide the player’s attention during special and rewarding moments, like the first time a user becomes a subscriber.
+					 				<br><br>
+					 				In addition to creating animation mockups, I also spent time implementing these animations directly into our game engine. I worked closely with engineers to create a development environment where designers had more control over controlling animation variables, like timing, to reduce development overhead.
+				 				</div>
+				 			</div>
+				 		</div>
+
+				 			<div class = "desktop-section-navigation-tabs">
+				 				<div class = "desktop-nav-style-line" id = "desktop-vip-line"></div>
+				 				<div class = "desktop-navigation-tabs">
+					 				<div class = "desktop-nav-item">
+					 					<div class = "desktop-nav-tab vip-nav-tab">
+					 						<div class = "desktop-nav-outer vip-nav-outer"></div>
+					 						<div class = "desktop-nav-inner vip-nav-inner"></div>
+					 					</div>
+					 					<div class = "desktop-nav-line vip-desktop-nav-line"></div>
+					 					<div class = "desktop-nav-label vip-desktop-nav-label">GENERAL</div>
+					 				</div>
+					 				<div class = "desktop-nav-item">
+					 					<div class = "desktop-nav-tab vip-nav-tab">
+					 						<div class = "desktop-nav-outer vip-nav-outer"></div>
+					 						<div class = "desktop-nav-inner vip-nav-inner"></div>
+					 					</div>
+					 					<div class = "desktop-nav-line vip-desktop-nav-line"></div>
+					 					<div class = "desktop-nav-label vip-desktop-nav-label">RESEARCH</div>
+					 				</div>
+					 				<div class = "desktop-nav-item">
+					 					<div class = "desktop-nav-tab vip-nav-tab">
+					 						<div class = "desktop-nav-outer vip-nav-outer"></div>
+					 						<div class = "desktop-nav-inner vip-nav-inner"></div>
+					 					</div>
+					 					<div class = "desktop-nav-line vip-desktop-nav-line"></div>
+					 					<div class = "desktop-nav-label vip-desktop-nav-label">UX</div>
+					 				</div>
+					 				<div class = "desktop-nav-item">
+					 					<div class = "desktop-nav-tab vip-nav-tab">
+					 						<div class = "desktop-nav-outer vip-nav-outer"></div>
+					 						<div class = "desktop-nav-inner vip-nav-inner"></div>
+					 					</div>
+					 					<div class = "desktop-nav-line vip-desktop-nav-line"></div>
+					 					<div class = "desktop-nav-label vip-desktop-nav-label">DELIVERABLES</div>
+					 				</div>
+					 				<div class = "desktop-nav-item">
+					 					<div class = "desktop-nav-tab vip-nav-tab">
+					 						<div class = "desktop-nav-outer vip-nav-outer"></div>
+					 						<div class = "desktop-nav-inner vip-nav-inner"></div>
+					 					</div>
+					 					<div class = "desktop-nav-line vip-desktop-nav-line"></div>
+					 					<div class = "desktop-nav-label vip-desktop-nav-label">ANIMATIONS</div>
+					 				</div>
+					 			</div>
+				 			</div>
+					</div>
+
+					<div class = "desktop-section-right">
+			 			<div class = "desktop-section-image" id = "vip-pb-images">
+				 			<div class = "desktop-image vip-desktop-image">
+			 					<img draggable = "false" id = "mobile-image" src = "assets/img/pixelberry/vip_general.png">
+			 				</div>
+			 				<div class = "desktop-image vip-desktop-image">
+			 					<img draggable = "false" id = "mobile-image" src = "assets/img/pixelberry/vip_research.png">
+			 				</div>
+			 				<div class = "desktop-image vip-desktop-image">
+			 					<img draggable = "false" id = "mobile-image" src = "assets/img/pixelberry/vip_ux.png">
+			 				</div>
+			 				<div class = "desktop-image vip-desktop-image">
+			 					<img draggable = "false" id = "mobile-image" src = "assets/img/pixelberry/vip_deliverables.png">
+			 				</div>
+			 				<div class = "desktop-image vip-desktop-image">
+			 					<img draggable = "false" id = "mobile-image" src = "assets/img/pixelberry/vip_anim.png">
+			 				</div>
+		 				</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div class = "mobile-container" id = "pb-subscription-mobile">
+				<div class = "pb-mobile-gradient-color-1">
+					<div class = "section-header section-header-white">VIP Subscription</div>
+				</div>
+				<div class = "pb-mobile-gradient-color-2">
+				 	<div class = "home-gradient-one">
+				 		<div class = "mobile-horizontal-item vip-mobile-nav-label">GENERAL</div>
+				 		<div class = "mobile-horizontal-item vip-mobile-nav-label">RESEARCH</div>
+				 		<div class = "mobile-horizontal-item vip-mobile-nav-label">UX</div>
+				 		<div class = "mobile-horizontal-item vip-mobile-nav-label">DELIVERABLES</div>
+				 		<div class = "mobile-horizontal-item vip-mobile-nav-label">ANIMATIONS</div>
+			 		</div>
+		 		</div>
+		 		<div class = "pb-mobile-gradient-color-3">
+			 		<div class = "section-content">
+			 			<div class = "content-item vip-mobile-content">
+			 				<div class = "section-description section-description-white">I lead the holistic review and documentation of the feature's design throughout the production process, fronting the coordination with engineers, QA, and other designers to communicate various subsystems and resolving upcoming issues during development and launch. <a href="https://www.pixelberrystudios.com/blog/2020/7/21/vip-access" id = "hyperlink" target = "_blank"><i><u>You can read more about VIP Access here!</u></i></a></div>
+			 				<div class = "home-mobile-image">
+			 					<img draggable = "false" id = "mobile-image" src = "assets/img/pixelberry/vip_general.png">
+			 				</div>
+			 			</div>
+			 			<div class = "content-item vip-mobile-content">
+			 				<div class = "section-description section-description-white">There was a large amount of research done for the design of this feature. Instead of starting with lo-fi wires and prototypes, we chose to move quicker with our iterations and data gathering through paper prototypes. Working with paper allowed us greater flexibility to play with flows and implement feedback changes directly on the spot.</div>
+			 				<div class = "home-mobile-image">
+			 					<img draggable = "false" id = "mobile-image" src = "assets/img/pixelberry/vip_research.png">
+			 				</div>
+			 			</div>
+			 			<div class = "content-item vip-mobile-content">
+			 				<div class = "section-description section-description-white">Once we finished with our research and ideations, I lead the review, organization, and communication of the VIP design systems between multiple departments throughout the development process. I remained the owner of overseeing the high-level design system of this feature and resolving upcoming issues throughout launch.</div>
+			 				<div class = "home-mobile-image">
+			 					<img draggable = "false" id = "mobile-image" src = "assets/img/pixelberry/vip_ux.png">
+			 				</div>
+			 			</div>
+			 			<div class = "content-item vip-mobile-content">
+			 				<div class = "section-description section-description-white">In addition to researching and designing the subscription skeleton model, I created documentation, user diagrams, feature boards, and prototypes to communicate the design intent, logic, and dependencies of the different systems across the entire team.</div>
+			 				<div class = "home-mobile-image">
+			 					<img draggable = "false" id = "mobile-image" src = "assets/img/pixelberry/vip_deliverables.png">
+			 				</div>
+			 			</div>
+			 			<div class = "content-item vip-mobile-content">
+			 				<div class = "section-description section-description-white">To make the VIP experience pop, I designed various transitions and animations for key points of the subscription flow. This included animating assets, playing with particle effects, and experimenting with adding motion to static parts of the screen. All this was done to use motion to guide the player’s attention during special and rewarding moments, like the first time a user becomes a subscriber.</div>
+			 				<div class = "home-mobile-image">
+			 					<img draggable = "false" id = "mobile-image" src = "assets/img/pixelberry/vip_anim.png">
+			 				</div>
+			 			</div>
+			 		</div>
+		 		</div>
+			</div>
+
+
+			<div class = "general-container before-after" id = "pb-small-card-container">
+				<div class = "section-header" id = "small-card-header">A Modern Revamp</div>
+		 		<div class = "section-description" id = "small-card-description">Another design initiative I worked on was redesigning <i>Choices’</i> storefront to bring a more modern look and feel to the product. I played an integral role in shaping the redesign's visual direction, improving readabiilty, optimizing flows, and increasing engagement. See some Below & After images of released redesigns below:</div>
+
+ 				<div class = "before-after-container">
+ 					<div class = "small-card-dropdown">
+ 						<div class = "small-card-dropdown-button">
+ 							<div class = "dropdown-text">Select a view</div>
+							<i class="fas fa-angle-down fa-2x"></i>
+						</div>
+						<div class = "small-card-dropdown-list">
+							<div class = "small-card-dropdown-item" id = "sm-card-item-1">Large Card View</div>
+							<div class = "small-card-dropdown-item" id = "sm-card-item-2">Featured View</div>
+							<div class = "small-card-dropdown-item" id = "sm-card-item-3">Browse View</div>
+						</div>
+ 					</div>
+		 			<div class = "before-after-wrapper" id = "wrapper1">
+		 				<div class = "before-after-status-wrapper">
+		 					<div class = "before-after-status" id = "before-status1">BEFORE</div>
+		 					<div class = "before-after-status" id = "after-status1">AFTER</div>
+		 				</div>
+		 				<div class = "before-after-image-wrapper">
+		 					<div class = "handle" id = "handle1">
+		 						<div class = "handle-circle">
+		 							<div class = "triangle-left"></div>
+		 							<div class = "triangle-right"></div>
+		 						</div>
+		 					</div>
+		 					<div class = "before-after-image">
+		 						<img draggable = "false" src = "assets/img/pixelberry/large_card_new.png">
+		 					</div>
+		 					<div class = "before-after-image" id = "old1">
+		 						<img draggable = "false" src = "assets/img/pixelberry/large_card_old.png">
+		 					</div>
+		 				</div>
+		 				<div class = "before-after-label">Large Card View</div>
+			 		</div>
+
+			 		<div class = "before-after-wrapper" id = "wrapper2">
+		 				<div class = "before-after-status-wrapper">
+		 					<div class = "before-after-status" id = "before-status2">BEFORE</div>
+		 					<div class = "before-after-status" id = "after-status2">AFTER</div>
+		 				</div>
+		 				<div class = "before-after-image-wrapper">
+		 					<div class = "handle" id = "handle2">
+		 						<div class = "handle-circle">
+		 							<div class = "triangle-left"></div>
+		 							<div class = "triangle-right"></div>
+		 						</div>
+		 					</div>
+		 					<div class = "before-after-image">
+		 						<img draggable="false" src = "assets/img/pixelberry/featured_new.png">
+		 					</div>
+		 					<div class = "before-after-image" id = "old2">
+		 						<img draggable="false" src = "assets/img/pixelberry/featured_old.png">
+		 					</div>
+		 				</div>
+		 				<div class = "before-after-label">Featured View</div>
+			 		</div>
+
+			 		<div class = "before-after-wrapper" id = "wrapper3">
+		 				<div class = "before-after-status-wrapper">
+		 					<div class = "before-after-status" id = "before-status3">BEFORE</div>
+		 					<div class = "before-after-status" id = "after-status3">AFTER</div>
+		 				</div>
+		 				<div class = "before-after-image-wrapper">
+		 					<div class = "handle" id = "handle3">
+		 						<div class = "handle-circle">
+		 							<div class = "triangle-left"></div>
+		 							<div class = "triangle-right"></div>
+		 						</div>
+		 					</div>
+		 					<div class = "before-after-image">
+		 						<img draggable="false" src = "assets/img/pixelberry/browse_new.png">
+		 					</div>
+		 					<div class = "before-after-image" id = "old3">
+		 						<img draggable="false" src = "assets/img/pixelberry/browse_old.png">
+		 					</div>
+		 				</div>
+		 				<div class = "before-after-label">Browse View</div>
+			 		</div>
+		 		</div>
+		 	</div>
+
+<!-- 		 	LARGE CARD CONTAINER-->
+		 	<div class = "desktop-container" id = "large-card-container">
+				<div class = "desktop-section-wrapper-two">
+				 	<div class = "desktop-section-left-two">
+					 	<div class = "desktop-section-image" id = "large-card-pb-images">
+						 	<div class = "desktop-image desktop-image-style-two large-card-desktop-image">
+					 			<img draggable = "false" id = "mobile-image" src = "assets/img/pixelberry/large_card_general.png">
+					 		</div>
+						 	<div class = "desktop-image desktop-image-style-two large-card-desktop-image">
+					 			<img draggable = "false" id = "mobile-image" src = "assets/img/pixelberry/large_card_ux.png">
+					 		</div>
+						 	<div class = "desktop-image desktop-image-style-two large-card-desktop-image">
+					 			<img draggable = "false" id = "mobile-image" src = "assets/img/pixelberry/large_card_visuals.png">
+					 		</div>
+						 	<div class = "desktop-image desktop-image-style-two large-card-desktop-image">
+					 			<img draggable = "false" id = "mobile-image" src = "assets/img/pixelberry/large_card_deliverables.png">
+					 		</div>
+						 	<div class = "desktop-image desktop-image-style-two large-card-desktop-image">
+					 			<img draggable = "false" id = "mobile-image" src = "assets/img/pixelberry/large_card_anims.png">
+					 		</div>
+			 			</div>
+			 		</div>
+
+			 		<div class = "desktop-section-right-two">
+			 			<div class = "desktop-section-right-two-content">
+			 				<div class = "desktop-content" id = "desktop-large-card-content">
+			 				<div class = "section-header section-header-white">Large Card</div>
+				 			<div class = "desktop-description-wrapper">
+				 				<div class = "desktop-section-description large-card-desktop-description">
+					 				One feature I enjoyed redesigning was the game’s detailed book view, also known as the Large Card. The Large Card is a view that players see often as it holds information about the state of the book and chapter they’re playing. As part of redesigning our storefront, I redesigned the Large Card to feel more modern and reduce redundant flows.
+					 				<br><br>
+					 				I took opportunities to give it a visual upgrade, simplify navigation, added modern transitions, overhaul our text to increase accessibility, and improve information display to be more meaningful to users. The outcome of this redesign informed the design direction of future features in the storefront redesign initiative. 
+				 				</div>
+				 				<div class = "desktop-section-description large-card-desktop-description">
+					 				Since the Large Card keeps track of the player’s state of play per book/chapter, this view had numerous states and various entry points from the rest of the app. My main goal was identifying how to make interacting with the Large Card more meaningful to the user. After doing competitor research and working with product, we ended up significantly simplifying the flow to reduce leading players to unnecessary views and information.
+					 				<br><br>
+					 				The amount of states for the feature were also reduced. I updated existing logic to account for these changes and other dependencies. I also took this opportunity to increase accessibility in our font and text-contrast ratio, and altered our UX language to be more meaningful.
+				 				</div>
+				 				<div class = "desktop-section-description large-card-desktop-description">
+					 				Keeping with my ‘more meaningful’ goal, I wanted to improve the visual heiarchy of the Large Card to match the significance of the content. We also wanted to keep the feel of our app ‘light and bright’. This led me to design the cover art larger, create a sleeker visual style for our HUD and icons, establish a new type system, and integrate many modern design patterns of gradient usage and negative space.
+					 				<br><br>
+					 				I also revisited our standard rules for aspect-ratio to improve the feel of our narrow devices. Much of these visual choices became the anchor in establishing the style of our storefront redesign going froward.
+				 				</div>
+				 				<div class = "desktop-section-description large-card-desktop-description">
+					 				Throughout my design process, I created various low-fidelity wireframes to high-fidelity mocks to communicate with other departments on the feature’s design intent and goals. I created assets and developed new cover art templates for internal use.
+					 				<br><br>
+									I also created many interactive prototypes to quickly test out early-flow navigation and to demonstrate polished transitions, animations, and the final user journey of changing between states. As the design owner of this feature, I also wrote the design documentation  and made any necessary deliverables that could help communicate the feature better across the team.
+				 				</div>
+				 				<div class = "desktop-section-description large-card-desktop-description">
+					 				To make the final designs feel more alive, I championed new interactions in our app that would modernize the feel of our game. Working closely with the engineer, we implemented various gesture-based animations that we didn’t have in our game prior such as swiping and expanding/collapsing.
+					 				<br><br>
+					 				I experimented with multiple interactions and effects during the early stages of ideation, and tweaked the motion during development to maintain polish quality throughout testing. At the end of it, having these new motions in our game felt pretty sweet.
+				 				</div>
+				 			</div>
+				 			</div>
+
+				 		<div class = "desktop-section-navigation-tabs">
+				 			<div class = "desktop-nav-style-line-two" id = "desktop-large-card-line"></div>
+				 			<div class = "desktop-navigation-tabs">
+					 			<div class = "desktop-nav-item">
+					 				<div class = "desktop-nav-tab large-card-nav-tab">
+					 					<div class = "desktop-nav-outer large-card-nav-outer"></div>
+					 					<div class = "desktop-nav-inner large-card-nav-inner"></div>
+					 				</div>
+					 				<div class = "desktop-nav-line large-card-desktop-nav-line"></div>
+					 				<div class = "desktop-nav-label large-card-desktop-nav-label">GENERAL</div>
+					 			</div>
+					 			<div class = "desktop-nav-item">
+					 				<div class = "desktop-nav-tab large-card-nav-tab">
+					 					<div class = "desktop-nav-outer large-card-nav-outer"></div>
+					 					<div class = "desktop-nav-inner large-card-nav-inner"></div>
+					 				</div>
+					 				<div class = "desktop-nav-line large-card-desktop-nav-line"></div>
+					 				<div class = "desktop-nav-label large-card-desktop-nav-label">UX</div>
+					 			</div>
+					 			<div class = "desktop-nav-item">
+					 				<div class = "desktop-nav-tab large-card-nav-tab">
+					 					<div class = "desktop-nav-outer large-card-nav-outer"></div>
+					 					<div class = "desktop-nav-inner large-card-nav-inner"></div>
+					 				</div>
+					 				<div class = "desktop-nav-line large-card-desktop-nav-line"></div>
+					 				<div class = "desktop-nav-label large-card-desktop-nav-label">VISUALS</div>
+					 			</div>
+					 			<div class = "desktop-nav-item">
+					 				<div class = "desktop-nav-tab large-card-nav-tab">
+					 					<div class = "desktop-nav-outer large-card-nav-outer"></div>
+					 					<div class = "desktop-nav-inner large-card-nav-inner"></div>
+					 				</div>
+					 				<div class = "desktop-nav-line large-card-desktop-nav-line"></div>
+					 				<div class = "desktop-nav-label large-card-desktop-nav-label">DELIVERABLES</div>
+					 			</div>
+					 			<div class = "desktop-nav-item">
+					 				<div class = "desktop-nav-tab large-card-nav-tab">
+					 					<div class = "desktop-nav-outer large-card-nav-outer"></div>
+					 					<div class = "desktop-nav-inner large-card-nav-inner"></div>
+					 				</div>
+					 				<div class = "desktop-nav-line large-card-desktop-nav-line"></div>
+					 				<div class = "desktop-nav-label large-card-desktop-nav-label">ANIMATIONS</div>
+					 			</div>
+					 		</div>
+				 		</div>
+			 			</div>
+			 		</div>
+			 	</div>
+		 	</div>
+
+			<div class = "mobile-container" id = "pb-large-card-mobile">
+				<div class = "section-header section-header-white">Large Card</div>
+				 <div class = "home-gradient-one">
+				 	<div class = "mobile-horizontal-item large-card-mobile-nav-label">GENERAL</div>
+				 	<div class = "mobile-horizontal-item large-card-mobile-nav-label">UX</div>
+				 	<div class = "mobile-horizontal-item large-card-mobile-nav-label">VISUALS</div>
+				 	<div class = "mobile-horizontal-item large-card-mobile-nav-label">PROTOTYPE</div>
+				 	<div class = "mobile-horizontal-item large-card-mobile-nav-label">ANIMATIONS</div>
+			 	</div>
+
+			 		<div class = "section-content">
+			 			<div class = "content-item large-card-mobile-content">
+			 				<div class = "section-description section-description-white">One feature I enjoyed redesigning was the game’s detailed book view, also known as the Large Card. I took opportunities to give it a visual upgrade, simplify navigation, added modern transitions, overhaul our text to increase accessibility, and improve information display to be more meaningful to users. The outcome of this redesign informed the design direction of future features in the storefront redesign initiative. </div>
+			 				<div class = "home-mobile-image">
+			 					<img draggable = "false" id = "mobile-image" src = "assets/img/pixelberry/large_card_general.png">
+			 				</div>
+			 			</div>
+			 			<div class = "content-item large-card-mobile-content">
+			 				<div class = "section-description section-description-white">Since the Large Card keeps track of the player’s state of play per book/chapter, this view had numerous states and various entry points from the rest of the app. My main goal was identifying how to make interacting with the Large Card more meaningful to the user. After doing competitor research and working with product, we ended up significantly simplifying the flow to reduce leading players to unnecessary views and information.</div>
+			 				<div class = "home-mobile-image">
+			 					<img draggable = "false" id = "mobile-image" src = "assets/img/pixelberry/large_card_ux.png">
+			 				</div>
+			 			</div>
+			 			<div class = "content-item large-card-mobile-content">
+			 				<div class = "section-description section-description-white">Keeping with my ‘more meaningful’ goal, I wanted to improve the visual heiarchy of the Large Card to match the significance of the content. I also revisited our standard rules for aspect-ratio to improve the feel of our narrow devices. Much of these visual choices became the anchor in establishing the style of our storefront redesign going froward.</div>
+			 				<div class = "home-mobile-image">
+			 					<img draggable = "false" id = "mobile-image" src = "assets/img/pixelberry/large_card_visuals.png">
+			 				</div>
+			 			</div>
+			 			<div class = "content-item large-card-mobile-content">
+			 				<div class = "section-description section-description-white">Throughout my design process, I created various low-fidelity wireframes to high-fidelity mocks to communicate with other departments on the feature’s design intent and goals. I created assets and developed new cover art templates for internal use. I also created many interactive prototypes and wrote the the design documentation.</div>
+			 				<div class = "home-mobile-image">
+			 					<img draggable = "false" id = "mobile-image" src = "assets/img/pixelberry/large_card_deliverables.png">
+			 				</div>
+			 			</div>
+			 			<div class = "content-item large-card-mobile-content">
+			 				<div class = "section-description section-description-white">To make the final designs feel more alive, I championed new interactions in our app that would modernize the feel of our game. Working closely with the engineer, we implemented various gesture-based animations that we didn’t have in our game prior such as swiping and expanding/collapsing.</div>
+			 				<div class = "home-mobile-image">
+			 					<img draggable = "false" id = "mobile-image" src = "assets/img/pixelberry/large_card_anims.png">
+			 				</div>
+			 			</div>
+			 		</div>
+		 		</div>
+
+				<div class = "more-image-container" id = "pb-more-image-container">
+		 			<div class = "general-container">
+			 			<div class = "section-header" id = "pixelberry-more-header">And More!</div>
+						<div class = "section-description" id = "pixelberry-more-description">I also worked on many other projects that either don’t translate well to to be shown in a visual format, or, unfortunately, I can’t show here. From spearheading feature process improvements and championing accessibility methods, from leading the design hiring processes to designing complex systems and frameworks, my time at Pixelberry was full of large impacting work with very talented and wonderful people.</div>
+		 			</div>
+		 			<div class = "more-image-wrapper">
+		 				<div class = "photo pb-more-image-photo" id = "one-photo">
+			 				<img draggable = "false" id = "mobile-image" src = "assets/img/pixelberry/settings.png">
+		 				</div>
+		 				<div class = "photo pb-more-image-photo" id = "two-photo">
+		 					<img draggable = "false" id = "mobile-image" src = "assets/img/pixelberry/vip_upsell.png">
+		 				</div>
+		 				<div class = "photo pb-more-image-photo" id = "three-photo">
+		 					<img draggable = "false" id = "mobile-image" src = "assets/img/pixelberry/small_card_rows.png">
+		 				</div>
+		 				<div class = "photo pb-more-image-photo" id = "four-photo">
+		 					<img draggable = "false" id = "mobile-image" src = "assets/img/pixelberry/browse.png">
+		 				</div>
+		 				<div class = "photo pb-more-image-photo" id = "five-photo">
+		 					<img draggable = "false" id = "mobile-image" src = "assets/img/pixelberry/crown_and_the_flame.png">
+		 				</div>
+		 				<div class = "photo pb-more-image-photo" id = "six-photo">
+		 					<img draggable = "false" id = "mobile-image" src = "assets/img/pixelberry/tutorial.png">
+		 				</div>
+		 				<div class = "photo pb-more-image-photo" id = "seven-photo">
+		 					<img draggable = "false" id = "mobile-image" src = "assets/img/pixelberry/iap_anim.png">
+		 				</div>
+		 				<div class = "photo pb-more-image-photo" id = "eight-photo">
+		 					<img draggable = "false" id = "mobile-image" src = "assets/img/pixelberry/profile.png">
+		 				</div>
+		 				<div class = "photo pb-more-image-photo" id = "nine-photo">
+		 					<img draggable = "false" id = "mobile-image" src = "assets/img/pixelberry/sign_in.png">
+		 				</div>
+		 			</div>
+		 		</div>
+			</div>
+
+
+
+		 <div class = "footer">© 2021 Bernice Wong | All Rights Reserved</div>
+
+
+	</body>
+</html>

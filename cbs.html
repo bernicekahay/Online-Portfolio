@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Bernice Wong's Design Portfolio - CBS Interactive</title>
+    	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    	<link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
+    	<link rel="stylesheet" href="assets/css/style.css">
+        <link rel="icon" type="image/png" href="assets/img/Logo.png"/>
+
+		<script src="https://kit.fontawesome.com/2abffad84e.js" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src = "assets/js/script.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+   		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+
+	</head>
+
+	<body>
+
+		<!--Mobile Side Navigation Bar-->
+		<div class = "mobile-navigation-dropdown" id = "dropdown">
+				<div class = "dropdown-item" id = "header">
+					<div class = "logo">Bernice Ka Hay Wong</div>
+					<div class = "close-button">
+						<i class="fas fa-times"></i>
+					</div>
+				</div>
+				<div class = "dropdown-item">
+					<a class = "item" href="index.html">Home</a>
+				</div>
+<!-- 				<div class = "dropdown-item">
+					<a class = "item" href="about.html">About</a>
+				</div> -->
+				<div class = "dropdown-item">
+					<a class = "item" href="Bernice-Wong-Resume.pdf" target = "_blank">Resume</a>
+				</div>
+		</div>
+
+		<div class = "nav-container">
+		<!--Desktop Navigation Bar-->
+			<div class = "navigation-parent">
+				<div class = "flexible-navigation-bar">
+
+					<!--always on left-->
+					<div class = "left-bar-container">
+						<a class = "social-media-icon" id = "twitter" onclick = "parent.open('https://twitter.com/bernicekahay')">
+							<i class="fab fa-twitter"></i>
+						</a>
+						<a class = "social-media-icon" id = "github" onclick = "parent.open('https://www.linkedin.com/in/bernice-wong')">
+							<i class="fab fa-linkedin-in"></i>
+						</a>
+						<a class = "social-media-icon" id = "github" onclick = "parent.open('https://github.com/bernicekahay')">
+							<i class="fab fa-github"></i>
+						</a>
+					</div>
+
+					<!--always on center-->
+					<div class = "middle-bar-container">
+						<div class = "logo">Bernice Ka Hay Wong</div>
+					</div>
+
+					<!--always on right-->
+					<div class = "right-bar-container">
+						<div class = "desktop-navigation">
+							<div class = "nav-item">
+								<a href="index.html">Home</a>
+							</div>
+<!-- 							<div class = "nav-item">
+								<a href="index.html">About</a>
+							</div> -->
+							<div class = "nav-item">
+								<a href="Bernice-Wong-Resume.pdf" target = "_blank">Resume</a>
+							</div>
+						</div>
+						<div class = "toggle-icon" id = "toggle">
+							<i class="fas fa-bars"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--Main Featured Banner-->
+		<div class = "project-page-container">
+			<div class = "project-featured-banner-container" id = "cbs-featured"></div>
+			<div class = "project-featured-wrapper">
+				<div class = "project-logo" id = "cbs-logo">
+					<img draggable = "false" src = "assets/img/cbs/logo.png">
+				</div>
+				<div class = "project-description" id = "cbs-project-description">At CBS Interactive, I worked with the Games Group which manages GameSpot, Giant Bomb, and Comic Vine. My time was spent on redesigning GameSpot's website. GameSpot went through a redesign 3 years ago, but the profile page had been neglected for a long time. My task was to redesign the profile page on GameSpot to improve the user experience, flow, and engageability. Unfortunately, I can not show any of my designs here but I can talk about my processes behind them.</div>
+			</div>
+
+
+		<!-- Problem & Goals Container-->
+		<div class = "image-background-container" id = "cbs-problem-goals">
+		 	<div class = "general-container" id = "cbs-inner-container">
+				<div class = "section-header" id = "cbs-problem-goals-header">The Problems & Goals</div>
+		 		<div class = "section-description" id = "cbs-problem-goals-description">With such a large and open-ended project, a lot of my time was spent on higher organizational thinking in order to find the right direction to take the profile. After many brainstorms, we boiled down the direction of the profile to four core pillars.</div>
+
+		 		<div class = "cbs-list-wrapper" id = "cbs-list-wrapper-desktop">
+			 		<div class = "cbs-list-row">
+			 			<div class = "cbs-list-item" id = "cbs-list-item-1">
+			 				<div class = "cbs-list-icon">
+			 					<div class = "outer-ring">
+			 						<div class = "inner-ring"></div>
+			 					</div>
+			 				</div>
+			 				<div class = "cbs-list-description">Encourage an online form of social communication.</div>
+			 			</div>
+			 			<div class = "cbs-list-item" id = "cbs-list-item-2">
+			 				<div class = "cbs-list-icon">
+			 					<div class = "outer-ring">
+			 						<div class = "inner-ring"></div>
+			 					</div>
+			 				</div>
+			 				<div class = "cbs-list-description">Become a hub for identity and personalization.</div>
+			 			</div>
+			 		</div>
+			 		<div class = "cbs-list-spacer"></div>
+			 		<div class = "cbs-list-row">
+			 			<div class = "cbs-list-item" id = "cbs-list-item-3">
+			 				<div class = "cbs-list-icon">
+			 					<div class = "outer-ring">
+			 						<div class = "inner-ring"></div>
+			 					</div>
+			 				</div>
+			 				<div class = "cbs-list-description">Aggregate content to complement the main website experience.</div>
+			 			</div>
+			 			<div class = "cbs-list-item" id = "cbs-list-item-4">
+			 				<div class = "cbs-list-icon">
+			 					<div class = "outer-ring">
+			 						<div class = "inner-ring"></div>
+			 					</div>
+			 				</div>
+			 				<div class = "cbs-list-description">Maintain a space for settings management.</div>
+			 			</div>
+			 		</div>
+		 		</div>
+
+		 		<div class = "cbs-list-wrapper" id = "cbs-list-wrapper-mobile">
+			 		<div class = "cbs-list-item" id = "cbs-list-item-1-mobile">
+			 			<div class = "cbs-list-icon">
+			 				<div class = "outer-ring">
+			 					<div class = "inner-ring"></div>
+			 				</div>
+			 			</div>
+			 			<div class = "cbs-list-description">Encourage an online form of social communication.</div>
+			 		</div>
+			 		<div class = "cbs-list-item" id = "cbs-list-item-2-mobile">
+			 			<div class = "cbs-list-icon">
+			 				<div class = "outer-ring">
+								<div class = "inner-ring"></div>
+		 					</div>
+		 				</div>
+		 				<div class = "cbs-list-description">Become a hub for identity and personalization.</div>
+		 			</div>
+			 		<div class = "cbs-list-item" id = "cbs-list-item-3-mobile">
+			 			<div class = "cbs-list-icon">
+			 				<div class = "outer-ring">
+								<div class = "inner-ring"></div>
+		 					</div>
+		 				</div>
+		 				<div class = "cbs-list-description">Aggregate content to complement the main website experience.</div>
+		 			</div>
+		 			<div class = "cbs-list-item" id = "cbs-list-item-4-mobile">
+		 				<div class = "cbs-list-icon">
+		 					<div class = "outer-ring">
+		 						<div class = "inner-ring"></div>
+		 					</div>
+		 				</div>
+		 				<div class = "cbs-list-description">Maintain a space for settings management.</div>
+			 		</div>
+		 		</div>
+
+		 	</div>
+		 </div>
+
+
+<!-- 		 Research Methods Container-->
+		 <div class = "cbs-research-methods-container">
+		 	<div class = "desktop-left-overlay">
+		 		<div class = "top-gradient"></div>
+		 		<div class = "bottom-gradient"></div>
+		 		<div class = "left-gradient"></div>
+		 		<div class = "right-gradient"></div>
+
+		 		<div class = "research-methods-content">
+					<div class = "section-header section-header-white" id = "research-methods-header">Research Methods</div>
+			 		<div class = "section-description section-description-white" id = "research-methods-description">To begin, we started gathering data to identify the greatest areas that needed improvement from users who frequently used Gamespot’s platform. We used a combination of analyzing existing metrics and seeking out current data through competitor analysis, and internal and external user testing. Wanting a mix of people who were both unfamiliar and familiar with the website, we interviewed internal employees from different projects and four Gamespot moderators.</div>
+
+			 		<div class = "research-icon-wrapper" id = "research-icon-wrapper-desktop">
+			 			<div class = "research-icon-item">
+			 				<div class = "research-icon">
+			 					<i class="fas fa-users fa-3x"></i>
+			 				</div>
+			 				<div class = "research-icon-label">USER</div>
+			 				<div class = "research-icon-label">INTERVIEWS</div>
+			 			</div>
+			 			<div class = "research-icon-item">
+			 				<div class = "research-icon">
+			 					<i class="fas fa-chart-bar fa-3x"></i>
+			 				</div>
+			 				<div class = "research-icon-label">COMPETITOR</div>
+			 				<div class = "research-icon-label">ANALYSIS</div>
+			 			</div>
+			 			<div class = "research-icon-item">
+			 				<div class = "research-icon">
+								<i class="fas fa-sitemap fa-3x"></i>
+			 				</div>
+			 				<div class = "research-icon-label">INFORMATION</div>
+			 				<div class = "research-icon-label">ARCHITECTURE</div>
+			 			</div>
+			 			<div class = "research-icon-item">
+			 				<div class = "research-icon">
+								<i class="fas fa-shoe-prints fa-3x"></i>
+			 				</div>
+			 				<div class = "research-icon-label">CUSTOMER</div>
+			 				<div class = "research-icon-label">JOURNEY</div>
+			 			</div>
+			 		</div>
+
+			 		<div class = "research-icon-wrapper" id = "research-icon-wrapper-mobile">
+			 			<div class = "research-icon-row">
+				 			<div class = "research-icon-item">
+				 				<div class = "research-icon">
+				 					<i class="fas fa-users"></i>
+				 				</div>
+				 				<div class = "research-icon-label">USER</div>
+				 				<div class = "research-icon-label">INTERVIEWS</div>
+				 			</div>
+				 			<div class = "research-icon-item">
+				 				<div class = "research-icon">
+			 						<i class="fas fa-chart-bar"></i>
+				 				</div>
+				 				<div class = "research-icon-label">COMPETITOR</div>
+				 				<div class = "research-icon-label">ANALYSIS</div>
+				 			</div>
+			 			</div>
+			 			<div class = "research-icon-spacer"></div>
+			 			<div class = "research-icon-row">
+				 			<div class = "research-icon-item">
+				 				<div class = "research-icon">
+									<i class="fas fa-sitemap"></i>
+				 				</div>
+				 				<div class = "research-icon-label">INFORMATION</div>
+				 				<div class = "research-icon-label">ARCHITECTURE</div>
+				 			</div>
+				 			<div class = "research-icon-item">
+				 				<div class = "research-icon">
+									<i class="fas fa-shoe-prints"></i>
+				 				</div>
+				 				<div class = "research-icon-label">CUSTOMER</div>
+				 				<div class = "research-icon-label">JOURNEY</div>
+				 			</div>
+			 			</div>
+			 		</div>
+
+
+		 		</div>
+		 	</div>
+		 </div>
+
+<!-- Design and Solutions Container-->
+		 	<div class = "desktop-container" id = "cbs-container">
+				<div class = "desktop-section-wrapper-two">
+				 	<div class = "desktop-section-left-two">
+					 	<div class = "desktop-section-image" id = "cbs-images">
+						 	<div class = "desktop-image desktop-image-style-two cbs-desktop-image">
+					 			<img draggable = "false" id = "mobile-image" src = "assets/img/cbs/cbs_general.png">
+					 		</div>
+						 	<div class = "desktop-image desktop-image-style-two cbs-desktop-image">
+					 			<img draggable = "false" id = "mobile-image" src = "assets/img/cbs/cbs_ux_mocks.png">
+					 		</div>
+						 	<div class = "desktop-image desktop-image-style-two cbs-desktop-image">
+					 			<img draggable = "false" id = "mobile-image" src = "assets/img/cbs/cbs_prototype.png">
+					 		</div>
+						 	<div class = "desktop-image desktop-image-style-two cbs-desktop-image">
+					 			<img draggable = "false" id = "mobile-image" src = "assets/img/cbs/me_showcase.png">
+					 		</div>
+			 			</div>
+			 		</div>
+
+			 		<div class = "desktop-section-right-two">
+			 			<div class = "desktop-section-right-two-content">
+			 				<div class = "desktop-content" id = "desktop-cbs-content">
+				 				<div class = "section-header section-header-white">Designs & Solutions</div>
+					 			<div class = "desktop-description-wrapper">
+					 				<div class = "desktop-section-description cbs-desktop-description">
+						 				Since the profile page had been neglected for years, there was a broad direction that we could’ve taken with its redesign. The hardest challenge was figuring out what the proper focus should be to such an open-ended task. I worked closely with the Head Designer, engineer, and product teams to narrow down the approach.
+										<br><br>
+										Afterwards, I worked with the internal design team to research, brainstorm, ideate, and create deliverables for the profile’s redesign. At the end, the final redesign was approved and implemented for QA Testing. I presented my research and final redesigns at CBS’ yearly Intern Showcase.
+					 				</div>
+					 				<div class = "desktop-section-description cbs-desktop-description">
+						 				As mentioned, the most difficult part of the redesign was figuring out the proper focus for the redesign project. I worked closely with the Head Designer to identify the proper existing and desired usages for the profile through various methods.
+						 				<br><br>
+						 				Alongside doing research work, I created low-fidelity wireframes to quickly communicate the design progress to the product team. We tested and tried various versions, iterating based on feedback until we were ready to move to a higher fidelity.
+					 				</div>
+					 				<div class = "desktop-section-description cbs-desktop-description">
+						 				I began to create mockups of the design with higher-fidelity levels while iterating based on teamwide feedback. I started designing for desktop first and moved onto mobile layout afterwards (although in hindsight there would’ve been great benefits to design for mobile-first).
+						 				<br><br>
+						 				I also created clickable prototypes to be used for internal and external user testing. After adjusting some of the designs to improve usability based on user feedback, I worked with engineers to implement the designs for QA testing.
+					 				</div>
+					 				<div class = "desktop-section-description cbs-desktop-description">
+						 				At the end of the project, I demonstrated my findings to CBS Interactive’s yearly Intern Showcase where the entire company could visit and see what we’ve done. It was incredibly fun to see the work of other interns, and also how far I grew as a designer in just a short amount of time.
+						 				<br><br>
+						 				A big thanks to the amazing games team at CBS, who are some of the kindest, fun, caring, and down-to-earth people I got to work with. And a bigger thanks to the design team there who took the time to help and mentor me!
+					 				</div>
+					 			</div>
+				 			</div>
+
+				 		<div class = "desktop-section-navigation-tabs">
+				 			<div class = "desktop-nav-style-line-two" id = "desktop-cbs-line"></div>
+				 			<div class = "desktop-navigation-tabs">
+					 			<div class = "desktop-nav-item">
+					 				<div class = "desktop-nav-tab cbs-nav-tab">
+					 					<div class = "desktop-nav-outer cbs-nav-outer"></div>
+					 					<div class = "desktop-nav-inner cbs-nav-inner"></div>
+					 				</div>
+					 				<div class = "desktop-nav-line cbs-desktop-nav-line"></div>
+					 				<div class = "desktop-nav-label cbs-desktop-nav-label">GENERAL</div>
+					 			</div>
+					 			<div class = "desktop-nav-item">
+					 				<div class = "desktop-nav-tab cbs-nav-tab">
+					 					<div class = "desktop-nav-outer cbs-nav-outer"></div>
+					 					<div class = "desktop-nav-inner cbs-nav-inner"></div>
+					 				</div>
+					 				<div class = "desktop-nav-line cbs-desktop-nav-line"></div>
+					 				<div class = "desktop-nav-label cbs-desktop-nav-label">UX & WIRES</div>
+					 			</div>
+					 			<div class = "desktop-nav-item">
+					 				<div class = "desktop-nav-tab cbs-nav-tab">
+					 					<div class = "desktop-nav-outer cbs-nav-outer"></div>
+					 					<div class = "desktop-nav-inner cbs-nav-inner"></div>
+					 				</div>
+					 				<div class = "desktop-nav-line cbs-desktop-nav-line"></div>
+					 				<div class = "desktop-nav-label cbs-desktop-nav-label">MOCKS</div>
+					 			</div>
+					 			<div class = "desktop-nav-item">
+					 				<div class = "desktop-nav-tab cbs-nav-tab">
+					 					<div class = "desktop-nav-outer cbs-nav-outer"></div>
+					 					<div class = "desktop-nav-inner cbs-nav-inner"></div>
+					 				</div>
+					 				<div class = "desktop-nav-line cbs-desktop-nav-line"></div>
+					 				<div class = "desktop-nav-label cbs-desktop-nav-label">SHOWCASE</div>
+					 			</div>
+					 		</div>
+				 		</div>
+			 			</div>
+			 		</div>
+			 	</div>
+		 	</div>
+
+			<div class = "mobile-container" id = "cbs-mobile">
+				<div class = "section-header section-header-white">Designs & Solutions</div>
+				 <div class = "home-gradient-one">
+				 	<div class = "mobile-horizontal-item cbs-mobile-nav-label">GENERAL</div>
+				 	<div class = "mobile-horizontal-item cbs-mobile-nav-label">UX & WIRES</div>
+				 	<div class = "mobile-horizontal-item cbs-mobile-nav-label">MOCKS</div>
+				 	<div class = "mobile-horizontal-item cbs-mobile-nav-label">SHOWCASE</div>
+			 	</div>
+
+			 	<div class = "section-content">
+			 		<div class = "content-item cbs-mobile-content">
+						<div class = "section-description section-description-white">Since the profile page had been neglected for years, there was a broad direction that we could’ve taken with its redesign. The hardest challenge was figuring out what the proper focus should be to such an open-ended task. I worked closely with the Head Designer, engineer, and product teams to narrow down the approach.</div>
+		 				<div class = "home-mobile-image">
+		 					<img draggable = "false" id = "mobile-image" src = "assets/img/cbs/cbs_general.png">
+			 			</div>
+			 		</div>
+			 		<div class = "content-item cbs-mobile-content">
+			 			<div class = "section-description section-description-white">As mentioned, the most difficult part of the redesign was figuring out the proper focus for the redesign project. I worked closely with the Head Designer to identify the proper existing and desired usages for the profile through various methods. I also created low-fidelity wireframes to quickly communicate the design progress to the product team.</div>
+						<div class = "home-mobile-image">
+		 					<img draggable = "false" id = "mobile-image" src = "assets/img/cbs/cbs_ux_mocks.png">
+		 				</div>
+		 			</div>
+		 			<div class = "content-item cbs-mobile-content">
+		 				<div class = "section-description section-description-white">I began to create mockups of the design with higher-fidelity levels while iterating based on teamwide feedback. I also created clickable prototypes to be used for internal and external user testing. After adjusting some of the designs to improve usability based on user feedback, I worked with engineers to implement the designs for QA testing.</div>
+			 			<div class = "home-mobile-image">
+			 				<img draggable = "false" id = "mobile-image" src = "assets/img/cbs/cbs_prototype.png">
+			 			</div>
+			 		</div>
+					<div class = "content-item cbs-mobile-content">
+		 				<div class = "section-description section-description-white">At the end of the project, I demonstrated my findings to CBS Interactive’s yearly Intern Showcase where the entire company could visit and see what we’ve done. It was incredibly fun to see the work of other interns, and also how far I grew as a designer in just a short amount of time.</div>
+		 				<div class = "home-mobile-image">
+		 					<img draggable = "false" id = "mobile-image" src = "assets/img/cbs/me_showcase.png">
+		 				</div>
+		 			</div>
+			 	</div>
+		 	</div>
+
+	<!-- Learnings Container-->
+			<div class = "learnings-container">
+				<div class = "section-header" id = "cbs-learnings-header">Learnings</div>
+				<div class = "learnings-items-wrapper">
+					<div class = "learnings-item" id = "learnings-item-1">The best designs come from compromises.</div>
+					<div class = "learnings-item" id = "learnings-item-2">How you communicate to others is just as important as your final designs.</div>
+					<div class = "learnings-item" id = "learnings-item-3">Explore all options, there are no stupid ideas.</div>
+					<div class = "learnings-item" id = "learnings-item-4">Nothing happens linearly and that’s okay!</div>
+				</div>
+			</div>
+
+
+		</div>
+
+
+
+		 <div class = "footer">© 2021 Bernice Wong | All Rights Reserved</div>
+
+	
+	</body>
+</html>

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Bernice Wong's Design Portfolio</title>
+    	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    	<link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
+    	<link rel="stylesheet" href="assets/css/style.css">
+        <link rel="icon" type="image/png" href="assets/img/Logo.png"/>
+ 		<script src="https://kit.fontawesome.com/2abffad84e.js" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src = "assets/js/script.js"></script>
+
+        <script src = "assets/js/parallax.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+   		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+
+	</head>
+
+	<body>
+		<!--Mobile Side Navigation Bar-->
+		<div class = "mobile-navigation-dropdown" id = "dropdown">
+				<div class = "dropdown-item" id = "header">
+					<div class = "logo">Bernice Ka Hay Wong</div>
+					<div class = "close-button">
+						<i class="fas fa-times"></i>
+					</div>
+				</div>
+				<div class = "dropdown-item">
+					<a class = "item" href="index.html">Home</a>
+				</div>
+<!-- 				<div class = "dropdown-item">
+					<a class = "item" href="about.html">About</a>
+				</div> -->
+				<div class = "dropdown-item">
+					<a class = "item" href="Bernice-Wong-Resume.pdf" target = "_blank">Resume</a>
+				</div>
+		</div>
+
+		<div class = "nav-container">
+		<!--Desktop Navigation Bar-->
+			<div class = "navigation-parent">
+				<div class = "flexible-navigation-bar">
+
+					<!--always on left-->
+					<div class = "left-bar-container">
+						<a class = "social-media-icon" id = "twitter" onclick = "parent.open('https://twitter.com/bernicekahay')">
+							<i class="fab fa-twitter"></i>
+						</a>
+						<a class = "social-media-icon" id = "github" onclick = "parent.open('https://www.linkedin.com/in/bernice-wong')">
+							<i class="fab fa-linkedin-in"></i>
+						</a>
+						<a class = "social-media-icon" id = "github" onclick = "parent.open('https://github.com/bernicekahay')">
+							<i class="fab fa-github"></i>
+						</a>
+					</div>
+
+					<!--always on center-->
+					<div class = "middle-bar-container">
+						<div class = "logo">Bernice Ka Hay Wong</div>
+					</div>
+
+					<!--always on right-->
+					<div class = "right-bar-container">
+						<div class = "desktop-navigation">
+							<div class = "nav-item">
+								<a href="index.html">Home</a>
+							</div>
+<!-- 							<div class = "nav-item">
+								<a href="index.html">About</a>
+							</div> -->
+							<div class = "nav-item">
+								<a href="Bernice-Wong-Resume.pdf" target = "_blank">Resume</a>
+							</div>
+						</div>
+						<div class = "toggle-icon" id = "toggle">
+							<i class="fas fa-bars"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<!--Main Featured Banner-->
+		<div class = "home-featured-banner-container">
+  			<div class = "featured-banner-content">
+  				<div class = "featured-banner-scrim">
+	  				<div class = "featured-banner-content-wrapper" id = "featured-parallax" data-relative-input="true" data-hover-only="true" data-origin-x="0.5" data-origin-y="0.5">
+		  				<div class = "featured-banner-heading" data-depth = "0.1">Hi there!</div>
+		  				<div class = "featured-banner-heading2"><i>User Experience Designer</i></div>
+		  				<div class = "featured-banner-body-text" data-depth = "0.15">Who am I? I’m just someone who enjoys thinking about fantasy, eating way too much sushi, and experimenting with creating small interactive experiences in different mediums. Feel free to ceck out my work below or just drop in to say hi!</div>
+		  				<a class = "button button-clipped" id = "home-featured-button" href="mailto:bernicekahay@gmail.com?subject=Hello!">Say Hi</a>
+	  				</div>
+  				</div>
+  			</div>
+		</div>
+
+		 <div class = "general-container" id = "my-work-container">
+		 	<div class = "section-header" id = "my-work-header">My Work</div>
+		 	<div class = "section-description" id = "my-work-description">I like to do a lot of things when I can figure out how to spend my time. Anywho, check out some of the work I’ve done below! Anywho, check out some of the work I’ve done below!</div>
+		 </div>
+
+		 <div class = "home-pixelberry-section">
+		 	<div class = "home-pb-background" id = "home-pb-desktop">
+				<div class = "home-pb-desktop-gradient">
+		 			<div class = "desktop-section-wrapper">
+			 		<div class = "desktop-section-left">
+			 			<div class = "desktop-content" id = "desktop-home-pb-content">
+			 				<div class = "section-header section-header-white" id = "desktop-home-pb-title">Pixelberry Studios</div>
+				 			<div class = "desktop-description-wrapper">
+				 				<div class = "desktop-section-description pb-desktop-description">
+					 				At Pixelberry Studios, I designed, launched, and maintained various integral features for the Top Grossing 100 mobile game <b><i>Choices: Stories You Play</i></b> and other projects. I led various research, design, and process initiatives to deliver user-centered solutions and strengthen teamwide guidance.
+					 				<br><br>
+					 				From conducting paper prototypes and user interviews, to spearheading feature production and design hiring, my time at Pixelberry Studios has been an exciting and impactful experience. I worked with many different departments to take on design, research, and leadership roles. Please feel free to check out some examples of my work.
+				 				</div>
+
+				 				<div class = "desktop-section-description pb-desktop-description">
+					 				VIP Subscription is our game's monthly subscription model. I lead the holistic review and documentation of the feature's design throughout the production process, fronting the coordination with engineers, QA, and other designers to communicate various subsystems and resolving upcoming issues during development and launch. <a href="https://www.pixelberrystudios.com/blog/2020/7/21/vip-access" id = "hyperlink" target = "_blank"><i><u>You can read more about VIP Access here!</u></i></a>
+					 				<br><br>
+					 				I lead the research and holistic review of the feature's design throughout the production process. My work ranged from creating paper prototypes, fronting coordinating between multiple departments, creating deliverables, implementing assets, and resolving various issues before and after launch. You can read more about my design process in 'Learn More'.
+				 				</div>
+
+				 				<div class = "desktop-section-description pb-desktop-description">
+					 				Large Card was one of the first features to kickoff our team's initiative to modernize the game’s storefront. Since Large Card is a view that many players interact with (as it contains all book/chapter information), I led the design of this feature to make consuming content more meaningful to players.
+					 				<br><br>
+					 				Asides from giving it a visual upgrade, I made changes that improved readability, simplified navigation complexity, and introduced new animation functionality into our app. The final design proved to largely inform the design direction of our future features. You can read more about my design process in 'Learn More'.
+				 				</div>
+
+				 				<div class = "desktop-section-description pb-desktop-description">
+					 				Like Large Card, Small Card was another feature I led that was part of redesigning our storefront to be more modern. Since each Small Card represent a series, it was extremely important that the combination of the cover art, book information, and user-state information was clear and readable.
+					 				<br><br>
+					 				Asides from creating wires, mocks, prototypes, and animations, I also made changes that improved accessibility, simplified states, improved our aspect ratio rules, created new standards for art templates, and made visual upgrades. You can read more about my design process in 'Learn More'.
+				 				</div>
+				 			</div>
+				 		</div>
+				 		
+
+			 			<div class = "desktop-section-navigation-tabs">
+			 				<div class = "desktop-nav-style-line" id = "desktop-pb-line"></div>
+			 				<div class = "desktop-navigation-tabs">
+				 				<div class = "desktop-nav-item">
+				 					<div class = "desktop-nav-tab pb-nav-tab">
+				 						<div class = "desktop-nav-outer pb-nav-outer"></div>
+				 						<div class = "desktop-nav-inner pb-nav-inner"></div>
+				 					</div>
+				 					<div class = "desktop-nav-line pb-desktop-nav-line"></div>
+				 					<div class = "desktop-nav-label pb-desktop-nav-label">GENERAL</div>
+				 				</div>
+				 				<div class = "desktop-nav-item">
+				 					<div class = "desktop-nav-tab pb-nav-tab">
+				 						<div class = "desktop-nav-outer pb-nav-outer"></div>
+				 						<div class = "desktop-nav-inner pb-nav-inner"></div>
+				 					</div>
+				 					<div class = "desktop-nav-line pb-desktop-nav-line"></div>
+				 					<div class = "desktop-nav-label pb-desktop-nav-label">SUBSCRIPTION</div>
+				 				</div>
+				 				<div class = "desktop-nav-item">
+				 					<div class = "desktop-nav-tab pb-nav-tab">
+				 						<div class = "desktop-nav-outer pb-nav-outer"></div>
+				 						<div class = "desktop-nav-inner pb-nav-inner"></div>
+				 					</div>
+				 					<div class = "desktop-nav-line pb-desktop-nav-line"></div>
+				 					<div class = "desktop-nav-label pb-desktop-nav-label">LARGE CARD</div>
+				 				</div>
+				 				<div class = "desktop-nav-item">
+				 					<div class = "desktop-nav-tab pb-nav-tab">
+				 						<div class = "desktop-nav-outer pb-nav-outer"></div>
+				 						<div class = "desktop-nav-inner pb-nav-inner"></div>
+				 					</div>
+				 					<div class = "desktop-nav-line pb-desktop-nav-line"></div>
+				 					<div class = "desktop-nav-label pb-desktop-nav-label">SMALL CARD</div>
+				 				</div>
+				 			</div>
+			 			</div>
+
+			 			<div class = "button button-clipped" id = "pb-home-button" onclick = "location.href='pixelberry.html';">Learn More</div>
+			 		</div>
+
+			 		<div class = "desktop-section-right">
+			 			<div class = "desktop-section-image">
+				 			<div class = "desktop-image pb-desktop-image">
+			 					<img draggable = "false" id = "mobile-image" src = "assets/img/pixelberry/featured_choices.png">
+			 				</div>
+			 				<div class = "desktop-image pb-desktop-image">
+			 					<img draggable = "false" id = "mobile-image" src = "assets/img/pixelberry/vip_general_phone.png">
+			 				</div>
+			 				<div class = "desktop-image pb-desktop-image">
+			 					<img draggable = "false" id = "mobile-image" src = "assets/img/pixelberry/lc_choices.png">
+			 				</div>
+			 				<div class = "desktop-image pb-desktop-image">
+			 					<img draggable = "false" id = "mobile-image" src = "assets/img/pixelberry/small_card_rows.png">
+			 				</div>
+		 				</div>
+			 		</div>
+		 			</div>
+		 		</div>
+		 	</div>
+
+
+		 	<div class = "mobile-container" id = "home-pb-mobile">
+		 			<div class = "section-header section-header-white">Pixelberry Studios</div>
+			 		<div class = "home-gradient-one">
+			 			<div class = "mobile-horizontal-item pb-mobile-nav-label">GENERAL</div>
+			 			<div class = "mobile-horizontal-item pb-mobile-nav-label">SUBSCRIPTION</div>
+			 			<div class = "mobile-horizontal-item pb-mobile-nav-label">LARGE CARD</div>
+			 			<div class = "mobile-horizontal-item pb-mobile-nav-label">SMALL CARD</div>
+		 			</div>
+
+
+		 		<div class = "section-content">
+		 			<div class = "content-item pb-mobile-content">
+		 				<div class = "section-description section-description-white">At Pixelberry Studios, I designed, launched, and maintained various integral features for the Top Grossing 100 mobile game <b><i>Choices: Stories You Play</i></b> and other projects. I led various research, design, and process initiatives to deliver user-centered solutions and strengthen teamwide guidance.</div>
+		 				<div class = "home-mobile-image">
+		 					<img draggable = "false" id = "mobile-image" src = "assets/img/pixelberry/featured_choices.png">
+		 				</div>
+		 			</div>
+		 			<div class = "content-item pb-mobile-content">
+		 				<div class = "section-description section-description-white">VIP Subscription is our game's monthly subscription model. I lead the holistic review and documentation of the feature's design throughout the production process, fronting the coordination with engineers, QA, and other designers to communicate various subsystems and resolving upcoming issues during development and launch.</div>
+		 				<div class = "home-mobile-image">
+		 					<img draggable = "false" id = "mobile-image" src = "assets/img/pixelberry/vip_general_phone.png">
+		 				</div>
+		 			</div>
+		 			<div class = "content-item pb-mobile-content">
+		 				<div class = "section-description section-description-white">Large Card was part of our team's initiative to modernize the game’s storefront. Since Large Card is a view that many players interact with (as it contains all book/chapter information), I led the design of this feature to make consuming content more meaningful to players. The final design proved to largely inform the design direction of our future features.</div>
+		 				<div class = "home-mobile-image">
+		 					<img draggable = "false" id = "mobile-image" src = "assets/img/pixelberry/lc_choices.png">
+		 				</div>
+		 			</div>
+		 			<div class = "content-item pb-mobile-content">
+		 				<div class = "section-description section-description-white">Like Large Card, Small Card was another feature I led that was part of redesigning our storefront to be more modern. Since each Small Card represent a series, it was extremely important that the combination of the cover art, book information, and user-state information was clear and readable.</div>
+		 				<div class = "home-mobile-image">
+		 					<img draggable = "false" id = "mobile-image" src = "assets/img/pixelberry/small_card_rows.png">
+		 				</div>
+		 			</div>
+		 		</div>
+		 		<div class = "button" id = "home-mobile-button" onclick = "location.href='pixelberry.html';">Learn More</div>
+		 	</div>
+
+		<div class = "section-two-container">
+				 <div class = "section-two" id = "netease-parallax" data-relative-input="true" data-hover-only="true" data-origin-x="0.5" data-origin-y="0.5">
+					<div class = "section-two-image" id = "home-netease-container" data-depth = "0.2"></div>
+				 	<div class = "home-gradient-two">
+					 	<div class = "section-header section-header-white">NetEase Games</div>
+					 	<div class = "section-description section-description-fixed-height section-description-white" id = "netease-section-description">Designed and improved the flow of various in-game features of a mobile battle-royale game for soft launch in 2 countries. Created interfaces, animations, artwork, and icons. Implemented all my designs from concept to final polish in Unity.</div>
+					 	<div class = "button button-clipped section-two-button" id = "netease-section-button" onclick = "location.href='netease.html';">Learn More</div>
+					</div>
+				 </div>
+
+				 <div class = "section-two-gap"></div>
+
+				 <div class = "section-two" id = "cbs-parallax" data-relative-input="true" data-hover-only="true" data-origin-x="0.5" data-origin-y="0.5">
+				 	<div class = "section-two-image" id = "home-cbs-container" data-depth = "0.2"></div>
+				 	<div class = "home-gradient-two">
+					 	<div class = "section-header section-header-white">CBS Interactive</div>
+					 	<div class = "section-description section-description section-description-fixed-height section-description-white" id = "cbs-section-description">Redesigned the visualization and flow of GameSpot's profile hub for both desktop and mobile. Conducted research & user testing, created new features, and provided high-quality design deliverables. Final redesign was engineered for QA Testing.</div>
+					 	<div class = "button button-clipped section-two-button" id = "cbs-section-button" onclick = "location.href='cbs.html';">Learn More</div>
+					</div>
+				 </div>
+			</div>
+		 </div>
+
+		<div class = "footer">© 2021 Bernice Wong | All Rights Reserved</div>
+
+	</body>
+
+	<script>
+	//not getting it because not loaded yet
+
+	var CBSscene = document.getElementById('cbs-parallax');
+	var parallaxCBS = new Parallax(CBSscene);
+
+	var NetEasescene = document.getElementById('netease-parallax');
+	var parallaxNetEase = new Parallax(NetEasescene);
+	</script>
+
+	<script>
+
+	</script>
+</html>
