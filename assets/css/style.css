@@ -532,7 +532,6 @@ a, a:hover, a:active, a:focus, a:link, a:visited {
 	background-position: top;
 	background-repeat: no-repeat;
 	background-attachment: scroll;
-	transition: all 0.3s ease 0s;
 }
 
 .project-logo {
