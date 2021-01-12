@@ -128,7 +128,7 @@ var percentage3 = 65;
 })(jQuery);
  
 
-// window.onload = function(){
+$(window).load(function(){
     //so that featured banner loads correctly
     $('.home-featured-banner-container').addClass("fadeIn");
     $('.home-featured-banner-container').css("opacity", 1);
@@ -192,7 +192,7 @@ var percentage3 = 65;
     animateNetEaseSection();
     animateCBSSection();
 
-// };
+});
 
 
 $(document).scroll(function() {
