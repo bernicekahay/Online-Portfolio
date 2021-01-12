@@ -14,8 +14,6 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
    		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
    		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
-
 	</head>
 
 	<body>
@@ -263,19 +261,112 @@
 
 		<div class = "footer">© 2021 Bernice Wong | All Rights Reserved</div>
 
+    
+
+	<script type = "text/javascript">
+
+	var currentIndexPB = 0;
+	var selectedIndexPB = 0;
+	var desktopPBLine = document.getElementsByClassName('pb-desktop-nav-line');
+	var desktopPBOuterNav = document.getElementsByClassName('pb-nav-outer');
+	var desktopPBInnerNav = document.getElementsByClassName('pb-nav-inner');
+	var desktopPBDes = document.getElementsByClassName('pb-desktop-description');
+	var desktopPBImage = document.getElementsByClassName('pb-desktop-image');
+	var desktopPBNavLabel = document.getElementsByClassName('pb-desktop-nav-label');
+	var mobilePBNavLabel = document.getElementsByClassName('pb-mobile-nav-label');
+	var mobilePBContent = document.getElementsByClassName('pb-mobile-content');
+	var desktopPBSeen = false;
+
+	$(window).on('load', function() {
+	    $('.home-featured-banner-container').addClass("fadeIn");
+	    $('.home-featured-banner-container').css("opacity", 1);
+
+	    $('.featured-banner-heading').addClass("fadeInUp");
+	    $('.featured-banner-heading2').addClass("fadeInUp");
+	    $('.featured-banner-body-text').addClass("fadeInUp");
+
+	    //this is being called first before js is loading
+	    //okay, might just hardcode this then, acnt figure out how to call functions from js.
+	    animateIntroHeading('.featured-banner-heading', '.featured-banner-body-text');
+	    animateButtonIn('#home-featured-button');
+
+	    setTimeout(function () {
+	      $('.featured-banner-heading').css("opacity", 1);
+	      $('.featured-banner-heading').removeClass("fadeInUp");
+	      $('.featured-banner-body-text').css("opacity", 1);
+	      $('.featured-banner-body-text').removeClass("fadeInUp")}, 800);
+	});
+
+	    initializeLabels(desktopPBNavLabel, mobilePBNavLabel, desktopPBNavLabel.length);
+    	initalizeDescriptionImage(desktopPBDes, desktopPBImage, mobilePBContent, desktopPBDes.length);
+    	initializeSelected(desktopPBLine, desktopPBOuterNav, desktopPBInnerNav, desktopPBLine.length);
+
+
+	/**Helper functions**/
+	function animateIntroHeading(stringHeading, stringBody) {
+		    $(stringHeading).addClass("fadeInUp");
+		    $(stringBody).addClass("fadeInUp");
+		}
+
+	function animateButtonIn(stringID) {
+	    setTimeout(function () {
+	      $(stringID).addClass("button-reveal");
+	      $(stringID).removeClass("button-clipped")}, 500);
+	  }
+
+	function initializeLabels(classListDesktop, classListMobile, length) {
+	  for (var i = 0; i < length; i++) {
+	    if (i == 0) {
+	      classListDesktop[i].classList.add("selected");
+	      classListMobile[i].classList.add("selected");
+	    } else {
+	      classListDesktop[i].classList.add("deselected");
+	      classListMobile[i].classList.add("deselected");
+	    }
+	  }
+	}
+
+	/**Initalizes both description and image**/
+	function initalizeDescriptionImage(classListDes, classListImage, classListMobile, length) {
+	   for (var i = 0; i < length; i++) {
+	    if (i == 0) {
+	      classListDes[i].classList.add("fadeIn");
+
+	      classListImage[i].classList.add("bring-to-front");
+
+	      classListMobile[i].classList.add("fadeIn");
+	    } else {
+	      classListDes[i].classList.add("hidden");
+
+	      classListMobile[i].classList.add("hidden");
+	    }
+	  } 
+	}
+
+	/**Initalizes both the line and outer select shape**/
+	function initializeSelected(classListLine, classListNavOuter, classListNavInner, length) {
+	  for (var i = 0; i < length; i++) {
+	    if (i == 0) {
+	    } else {
+	      classListLine[i].classList.add("hidden");
+	      classListNavOuter[i].classList.add("hidden");
+	      classListNavInner[i].classList.add("deselected");
+
+	    }
+	  }
+	}
+
+	</script>
+
 	</body>
+
 
 	<script>
 	//not getting it because not loaded yet
-
 	var CBSscene = document.getElementById('cbs-parallax');
 	var parallaxCBS = new Parallax(CBSscene);
 
 	var NetEasescene = document.getElementById('netease-parallax');
 	var parallaxNetEase = new Parallax(NetEasescene);
-	</script>
-
-	<script>
-
 	</script>
 </html>

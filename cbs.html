@@ -399,10 +399,94 @@
 					<div class = "learnings-item" id = "learnings-item-4">Nothing happens linearly and that’s okay!</div>
 				</div>
 			</div>
-
-
 		</div>
 
+<script type = "text/javascript">
+
+	var currentIndexCBS = 0;
+	var selectedIndexCBS = 0;
+	var desktopCBSLine = document.getElementsByClassName('cbs-desktop-nav-line');
+	var desktopCBSOuterNav = document.getElementsByClassName('cbs-nav-outer');
+	var desktopCBSInnerNav = document.getElementsByClassName('cbs-nav-inner');
+	var desktopCBSDes = document.getElementsByClassName('cbs-desktop-description');
+	var desktopCBSImage = document.getElementsByClassName('cbs-desktop-image');
+	var desktopCBSNavLabel = document.getElementsByClassName('cbs-desktop-nav-label');
+	var mobileCBSNavLabel = document.getElementsByClassName('cbs-mobile-nav-label');
+	var mobileCBSContent = document.getElementsByClassName('cbs-mobile-content');
+	var desktopCBSSeen = false;
+	var CBSLearningsSeen = false;
+	var CBSLearningsItemsSeen = false;
+	var learningsItem = document.getElementsByClassName('learnings-item');
+
+
+	$(window).on('load', function() {
+		animateIntroHeading('#cbs-logo', '#cbs-project-description');
+	    initializeLabels(desktopCBSNavLabel, mobileCBSNavLabel, desktopCBSNavLabel.length);
+    	initalizeDescriptionImage(desktopCBSDes, desktopCBSImage, mobileCBSContent, desktopCBSDes.length);
+    	initializeSelected(desktopCBSLine, desktopCBSOuterNav, desktopCBSInnerNav, desktopCBSLine.length);
+    	initializeLearnings(learningsItem);
+	});
+
+	/**Helper functions**/
+	function animateIntroHeading(stringHeading, stringBody) {
+		    $(stringHeading).addClass("fadeInUp");
+		    $(stringBody).addClass("fadeInUp");
+	}
+
+	function initializeLabels(classListDesktop, classListMobile, length) {
+	  for (var i = 0; i < length; i++) {
+	    if (i == 0) {
+	      classListDesktop[i].classList.add("selected");
+	      classListMobile[i].classList.add("selected");
+	    } else {
+	      classListDesktop[i].classList.add("deselected");
+	      classListMobile[i].classList.add("deselected");
+	    }
+	  }
+	}
+
+	/**Initalizes both description and image**/
+	function initalizeDescriptionImage(classListDes, classListImage, classListMobile, length) {
+	   for (var i = 0; i < length; i++) {
+	    if (i == 0) {
+	      classListDes[i].classList.add("fadeIn");
+
+	      classListImage[i].classList.add("bring-to-front");
+
+	      classListMobile[i].classList.add("fadeIn");
+	    } else {
+	      classListDes[i].classList.add("hidden");
+
+	      classListMobile[i].classList.add("hidden");
+	    }
+	  } 
+	}
+
+	/**Initalizes both the line and outer select shape**/
+	function initializeSelected(classListLine, classListNavOuter, classListNavInner, length) {
+	  for (var i = 0; i < length; i++) {
+	    if (i == 0) {
+	    } else {
+	      classListLine[i].classList.add("hidden");
+	      classListNavOuter[i].classList.add("hidden");
+	      classListNavInner[i].classList.add("deselected");
+
+	    }
+	  }
+	}
+
+	function initializeLearnings(classList) {
+	  var length = classList.length;
+	  for (var i = 0; i < length; i++) {
+	    if (i == 0) {
+	      classList[i].classList.add("active");
+	    } else {
+	      classList[i].classList.add("inactive");
+	    }
+	  }
+	}
+
+</script>
 
 
 		 <div class = "footer">© 2021 Bernice Wong | All Rights Reserved</div>

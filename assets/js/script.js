@@ -128,72 +128,21 @@ var percentage3 = 65;
 })(jQuery);
  
 
-$(window).load(function(){
-    //so that featured banner loads correctly
-    $('.home-featured-banner-container').addClass("fadeIn");
-    $('.home-featured-banner-container').css("opacity", 1);
+//Not working for safari
+// $(window).onpageshow = function() {
+  $(window).on('load', function() {
 
-    // Starting transitions for home page
-    $('.featured-banner-heading').addClass("fadeInUp");
-    $('.featured-banner-heading2').addClass("fadeInUp");
-    $('.featured-banner-body-text').addClass("fadeInUp");
-      // setTimeout(function () {
-      // var featuredScene = document.getElementById('featured-parallax');
-      // var parallaxFeatured = new Parallax(featuredScene)}, 1000);
-    animateIntroHeading('.featured-banner-heading', '.featured-banner-body-text');
-    animateButtonIn('#home-featured-button');
-
-    setTimeout(function () {
-      $('.featured-banner-heading').css("opacity", 1);
-      $('.featured-banner-heading').removeClass("fadeInUp");
-      $('.featured-banner-body-text').css("opacity", 1);
-      $('.featured-banner-body-text').removeClass("fadeInUp")}, 800);
-
-    // Animations for Pixelberry Studios Page
-    animateIntroHeading('#pixelberry-logo', '#pixelberry-project-description');
-    animateButtonIn('#pb-ios-button');
-    animateButtonIn('#pb-android-button');
-
-    //Animmations for NetEase
-    animateIntroHeading('#netease-logo', '#netease-project-description');
-    $('#netease-video').addClass('fadeInUp');
-
-    //Animations for CBS
-    animateIntroHeading('#cbs-logo', '#cbs-project-description');
-
-
-    calcStartClip();
-
-    initializeLabels(desktopPBNavLabel, mobilePBNavLabel, desktopPBNavLabel.length);
-    initializeLabels(desktopVIPNavLabel, mobileVIPNavLabel, desktopVIPNavLabel.length);
-    initializeLabels(desktopLargeCardNavLabel, mobileLargeCardNavLabel, desktopLargeCardNavLabel.length);
-    initializeLabels(desktopNetEaseNavLabel, mobileNetEaseNavLabel, desktopNetEaseNavLabel.length);
-    initializeLabels(desktopCBSNavLabel, mobileCBSNavLabel, desktopCBSNavLabel.length);
-
-    initalizeDescriptionImage(desktopPBDes, desktopPBImage, mobilePBContent, desktopPBDes.length);
-    initalizeDescriptionImage(desktopVIPDes, desktopVIPImage, mobileVIPContent, desktopVIPDes.length);
-    initalizeDescriptionImage(desktopLargeCardDes, desktopLargeCardImage, mobileLargeCardContent, desktopLargeCardDes.length);
-    initalizeDescriptionImage(desktopNetEaseDes, desktopNetEaseImage, mobileNetEaseContent, desktopNetEaseDes.length);
-    initalizeDescriptionImage(desktopCBSDes, desktopCBSImage, mobileCBSContent, desktopCBSDes.length);
-
-    initializeSelected(desktopPBLine, desktopPBOuterNav, desktopPBInnerNav, desktopPBLine.length);
-    initializeSelected(desktopVIPLine, desktopVIPOuterNav, desktopVIPInnerNav, desktopVIPLine.length);
-    initializeSelected(desktopLargeCardLine, desktopLargeCardOuterNav, desktopLargeCardInnerNav, desktopLargeCardLine.length);
-    initializeSelected(desktopNetEaseLine, desktopNetEaseOuterNav, desktopNetEaseInnerNav, desktopNetEaseLine.length);
-    initializeSelected(desktopCBSLine, desktopCBSOuterNav, desktopCBSInnerNav, desktopCBSLine.length);
-
-    initializeLearnings(learningsItem);
     animateWorkContainer();
     animateCBSHomeSection();
     animateNetEaseHomeSection();
     animateHomePBSection();
+
     animateVIPSection();
     animateLargeCardSection();
     animateNetEaseSection();
     animateCBSSection();
 
 });
-
 
 $(document).scroll(function() {
   /**Animating index sections that come in.**/
