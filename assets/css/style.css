@@ -1817,7 +1817,7 @@ a, a:hover, a:active, a:focus, a:link, a:visited {
 	padding-bottom: 70px;
 	width: 100%;
 	overflow: auto;
-	background-image: url("../../assets/img/pixelberry/pb_blur1.png");
+	background-image: url("../../assets/img/pixelberry/pb.png");
 	background-size: cover;
 	background-attachment: fixed;
 }
@@ -2330,7 +2330,7 @@ a, a:hover, a:active, a:focus, a:link, a:visited {
 
 	#home-pb-desktop {
 		display: flex;
-		background-image: url("../../assets/img/pixelberry/pb_blur1.png");
+		background-image: url("../../assets/img/pixelberry/pb.png");
 		background-size: cover;
 		background-attachment: fixed;
 	}
