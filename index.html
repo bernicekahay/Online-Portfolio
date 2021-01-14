@@ -274,9 +274,11 @@
 	var desktopPBNavLabel = document.getElementsByClassName('pb-desktop-nav-label');
 	var mobilePBNavLabel = document.getElementsByClassName('pb-mobile-nav-label');
 	var mobilePBContent = document.getElementsByClassName('pb-mobile-content');
+	var desktopPBSeen = false;
+	var delay = 260;
+	var delayAddition = 150;
 
 	$(window).on('load', function() {
-		var desktopPBSeen = false;
 	    $('.home-featured-banner-container').addClass("fadeIn");
 	    $('.home-featured-banner-container').css("opacity", 1);
 
@@ -347,6 +349,43 @@
 	}
 
 	/**Helper functions**/
+	function animateModule(desktopContentString, classListImage, desktopLineString, 
+	  classListNavLabel, classListLine, classListOuterNav, classListInnerNav, length) {
+	  $(desktopContentString).addClass("fadeInUp");
+	  classListImage[0].classList.add("reveal");
+	  classListImage[0].classList.add("visible");
+	  setTimeout(function() {
+	    $(desktopLineString).addClass("grow");
+	    classListLine[0].classList.add("visible");
+	    classListOuterNav[0].classList.add("visible");
+	    classListInnerNav[0].classList.add("selected");}, delay);
+	}
+
+	/**Helper function for animateModule(). Animates the inner nav icons popping in and the button. Pairs with initializeLabels.**/
+	function animateNavigation(classListLabel, classNavInner, length) {
+	  for (let i = 0; i < length; i++) {
+	    setTimeout(function(){
+	      classNavInner[i].classList.add('popIn');
+	      classListLabel[i].classList.add('fadeIn');
+	      classListLabel[i].classList.add('visible');
+	    }, delay);
+	    delay += delayAddition;
+	  }
+	  /**Removes the fadein**/
+	  for (let i = 0; i < length; i++) {
+	    setTimeout(function(){
+	      classListLabel[i].classList.remove('fadeIn');
+	    }, delay + (delayAddition * (length + 1)));
+	  }
+	}
+
+	/**Helper function for animateModule(). Animates the inner nav icons popping in and the button. Pairs with initializeLabels.**/
+	function animateNavigationButton(buttonID, length) {
+	  setTimeout(function(){
+	    $(buttonID).addClass("button-reveal");
+	    $(buttonID).removeClass("button-clipped");
+	  }, delayAddition * (length+3));
+	}
 
 	 // The function returns true when X percent (as a number from 0 to 100) of the element is visible. 
 	 // Only determines if the measurements of the element are visible and not if
