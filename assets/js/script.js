@@ -126,21 +126,7 @@ var percentage3 = 65;
     return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
   };
 })(jQuery);
- 
 
-
-  $(window).on('load', function() {
-    // animateWorkContainer();
-    // animateCBSHomeSection();
-    // animateNetEaseHomeSection();
-    // animateHomePBSection();
-
-    // animateVIPSection();
-    // animateLargeCardSection();
-    // animateNetEaseSection();
-    animateCBSSection();
-
-});
 
 $(document).scroll(function() {
   /**Animating index sections that come in.**/

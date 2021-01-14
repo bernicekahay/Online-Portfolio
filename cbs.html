@@ -418,6 +418,16 @@
 	var CBSLearningsItemsSeen = false;
 	var learningsItem = document.getElementsByClassName('learnings-item');
 
+	/**CBS Variables**/
+	var CBSProblemsGoalsSeen = false;
+	var CBSResearchMethodsSeen = false;
+	var CBSLearningsSeen = false;
+	var CBSLearningsItemsSeen = false;
+
+	/**Values for animation entering**/
+	var delay = 260;
+	var delayAddition = 150;
+
 
 	$(window).on('load', function() {
 		animateIntroHeading('#cbs-logo', '#cbs-project-description');
@@ -425,9 +435,149 @@
     	initalizeDescriptionImage(desktopCBSDes, desktopCBSImage, mobileCBSContent, desktopCBSDes.length);
     	initializeSelected(desktopCBSLine, desktopCBSOuterNav, desktopCBSInnerNav, desktopCBSLine.length);
     	initializeLearnings(learningsItem);
+
+    	animateCBSSection();
+		animateCBSProblemsGoals();
+		animateCBSResearchMethods();
+		animateLearnings();
+		animateLearningsItems();
+
 	});
 
 	/**Helper functions**/
+	 // The function returns true when X percent (as a number from 0 to 100) of the element is visible. 
+	 // Only determines if the measurements of the element are visible and not if
+	 // the element is hidden with opacity, visibility etc..
+	function percentInViewport(objectString, percentVisible) {
+	    var el = document.querySelector(objectString);
+	    if (el!=null) {
+	      rect = el.getBoundingClientRect();
+	      windowHeight = (window.innerHeight || document.documentElement.clientHeight);
+	  return !(
+	    Math.floor(100 - (((rect.top >= 0 ? 0 : rect.top) / +-(rect.height / 1)) * 100)) < percentVisible ||
+	    Math.floor(100 - ((rect.bottom - windowHeight) / rect.height) * 100) < percentVisible
+	    )
+	  }
+	}
+
+	function removeAndSetVisible(classList) {
+	  for (var i = 0; i < classList.length; i++) {
+	    classList[i].classList.remove("fadePopIn");
+	    classList[i].classList.add('visible');
+	  }
+	}
+
+	function animateLearnings() {
+	    if ((percentInViewport(".learnings-container", 20)) && (!CBSLearningsSeen)) {
+	    CBSLearningsSeen = true;
+	    $('#cbs-learnings-header').addClass("fadeInUp");
+	  }
+	}
+
+	function animateLearningsItems() {
+	  if ((percentInViewport(".learnings-container", 60)) && (!CBSLearningsItemsSeen)) {
+	  CBSLearningsItemsSeen = true;
+	    $("#learnings-item-1").addClass("fadePopIn");
+	      setTimeout(function() {
+	        $("#learnings-item-2").addClass("fadePopIn");
+	        setTimeout(function() {
+	          $("#learnings-item-3").addClass("fadePopIn");
+	            setTimeout(function() {
+	              $("#learnings-item-4").addClass("fadePopIn");
+	                setTimeout(function() {
+	                  removeAndSetVisible(learningsItem);
+	                }, 1000);
+	            }, 270);
+	        }, 220);
+	    }, 170);
+	  }
+	}
+
+	function animateCBSResearchMethods() {
+	    if ((percentInViewport(".cbs-research-methods-container", 20)) && (!CBSResearchMethodsSeen)) {
+	    CBSResearchMethodsSeen = true;
+	    animateIntroHeading('#research-methods-header', '#research-methods-description');
+	  }
+	}
+
+	/**Animating the items for CBS Problems & Goals**/
+	function animateCBSListItemsDesktop() {
+	    $("#cbs-list-item-1").addClass("fadePopIn");
+	    setTimeout(function() {
+	      $("#cbs-list-item-2").addClass("fadePopIn");
+	      setTimeout(function() {
+	        $("#cbs-list-item-3").addClass("fadePopIn");
+	          setTimeout(function() {
+	            $("#cbs-list-item-4").addClass("fadePopIn");
+	          }, 270);
+	      }, 220);
+	  }, 170);
+	}
+
+	/**Animating the items for CBS Problems & Goals**/
+	function animateCBSListItemsMobile() {
+	    $("#cbs-list-item-1-mobile").addClass("fadePopIn");
+	    setTimeout(function() {
+	      $("#cbs-list-item-2-mobile").addClass("fadePopIn");
+	      setTimeout(function() {
+	        $("#cbs-list-item-3-mobile").addClass("fadePopIn");
+	          setTimeout(function() {
+	            $("#cbs-list-item-4-mobile").addClass("fadePopIn");
+	          }, 270);
+	      }, 220);
+	  }, 170);
+	}
+
+
+	function animateCBSProblemsGoals() {
+	    if ((percentInViewport("#cbs-problem-goals", 40)) && (!CBSProblemsGoalsSeen)) {
+	    CBSProblemsGoalsSeen = true;
+	    animateIntroHeading('#cbs-problem-goals-header', '#cbs-problem-goals-description');
+	    setTimeout(function() {
+	      animateCBSListItemsDesktop();
+	      animateCBSListItemsMobile();}, 150);
+	  }
+	}
+
+	function animateModule(desktopContentString, classListImage, desktopLineString, 
+	  classListNavLabel, classListLine, classListOuterNav, classListInnerNav, length) {
+	  $(desktopContentString).addClass("fadeInUp");
+	  classListImage[0].classList.add("reveal");
+	  classListImage[0].classList.add("visible");
+	  setTimeout(function() {
+	    $(desktopLineString).addClass("grow");
+	    classListLine[0].classList.add("visible");
+	    classListOuterNav[0].classList.add("visible");
+	    classListInnerNav[0].classList.add("selected");}, delay);
+	}
+
+	/**Helper function for animateModule(). Animates the inner nav icons popping in and the button. Pairs with initializeLabels.**/
+	function animateNavigation(classListLabel, classNavInner, length) {
+	  for (let i = 0; i < length; i++) {
+	    setTimeout(function(){
+	      classNavInner[i].classList.add('popIn');
+	      classListLabel[i].classList.add('fadeIn');
+	      classListLabel[i].classList.add('visible');
+	    }, delay);
+	    delay += delayAddition;
+	  }
+	  /**Removes the fadein**/
+	  for (let i = 0; i < length; i++) {
+	    setTimeout(function(){
+	      classListLabel[i].classList.remove('fadeIn');
+	    }, delay + (delayAddition * (length + 1)));
+	  }
+	}
+
+	function animateCBSSection() {
+	  if ((percentInViewport("#cbs-container", 20)) && (!desktopCBSSeen)) {
+	    desktopCBSSeen = true;
+	    animateModule('#desktop-cbs-content', desktopCBSImage, '#desktop-cbs-line',
+	      desktopCBSNavLabel, desktopCBSLine, desktopCBSOuterNav, desktopCBSInnerNav, desktopCBSNavLabel.length);
+	    animateNavigation(desktopCBSNavLabel, desktopCBSInnerNav, desktopCBSNavLabel.length);
+	  }
+	}
+
 	function animateIntroHeading(stringHeading, stringBody) {
 		    $(stringHeading).addClass("fadeInUp");
 		    $(stringBody).addClass("fadeInUp");
