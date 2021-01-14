@@ -576,6 +576,12 @@
 	var delay = 260;
 	var delayAddition = 150;
 
+	/**Pixelberry Page Variables**/
+	var PBImagesSeen = false;
+	var SmallCardSeen = false;
+	var PBMoreImagesSeen = false;
+	var PBMoreImages = document.getElementsByClassName('pb-more-image-photo');
+
 	$(window).on('load', function() {
 	// Animations for Pixelberry Studios Page
     animateIntroHeading('#pixelberry-logo', '#pixelberry-project-description');
@@ -593,9 +599,50 @@
 
     animateVIPSection();
     animateLargeCardSection();
+    animatePBImage();
+    animateSmallCard();
+    animatePBMore();
 	});
 
 	/**Helper functions**/
+	function animatePBMore() {
+	    if ((percentInViewport("#pb-more-image-container", 20)) && (!PBMoreImagesSeen)) {
+	    PBMoreImagesSeen = true;
+	    animateIntroHeading('#pixelberry-more-header', '#pixelberry-more-description');
+	    animateMoreImages(PBMoreImages);
+	  }
+	}
+
+	function animateMoreImages(classImages) {
+	  for (var i = 0; i < classImages.length; i++) {
+	    classImages[i].classList.add("fadeInUpMoreImages");
+	  }
+	}
+
+	function animateIntroHeading(stringHeading, stringBody) {
+	    $(stringHeading).addClass("fadeInUp");
+	    $(stringBody).addClass("fadeInUp");
+	}
+
+	function animateSmallCard() {
+	    if ((percentInViewport("#pb-small-card-container", 20)) && (!SmallCardSeen)) {
+	      SmallCardSeen = true;
+	    animateIntroHeading('#small-card-header', '#small-card-description');
+	  }
+	}
+
+	function animatePBImage() {
+	  if ((percentInViewport(".pixelberry-image-wrapper", 20)) && (!PBImagesSeen)) {
+	    $('#pb-image-middle').addClass("pb-middle-image-anim");
+	    setTimeout(function() {
+	      $('#pb-image-left').addClass("pb-image-anim");
+	      setTimeout(function() {
+	        $('#pb-image-right').addClass("pb-image-anim");
+	      }, 130);
+	    }, 100);
+	  }
+	}
+
 	 // The function returns true when X percent (as a number from 0 to 100) of the element is visible. 
 	 // Only determines if the measurements of the element are visible and not if
 	 // the element is hidden with opacity, visibility etc..
