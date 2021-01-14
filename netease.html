@@ -412,6 +412,17 @@
 	var percentage2 = 65;
 	var percentage3 = 65;
 
+	/**Netease Variables**/
+	var NetEaseNavFlowSeen = false;
+	var NetEaseNavFlowImages = document.getElementsByClassName('netease-nav-flow-photo');
+	var NetEaseWiresSeen = false;
+	var NetEaseMoreImagesSeen = false;
+	var NetEaseMoreImages = document.getElementsByClassName('netease-more-image-photo');
+
+	/**Values for animation entering**/
+	var delay = 260;
+	var delayAddition = 150;
+
 
 	$(window).on('load', function() {
 	    animateIntroHeading('#netease-logo', '#netease-project-description');
