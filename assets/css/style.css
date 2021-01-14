@@ -1789,6 +1789,7 @@ a, a:hover, a:active, a:focus, a:link, a:visited {
 }
 
 #home-netease-container {
+	background-position: center center;
 	background-image: url("../../assets/img/netease.png");
 }
 
@@ -2332,6 +2333,7 @@ a, a:hover, a:active, a:focus, a:link, a:visited {
 		display: flex;
 		background-image: url("../../assets/img/pixelberry/pb.png");
 		background-size: cover;
+		background-position: center;
 		background-attachment: fixed;
 	}
 
