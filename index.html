@@ -301,8 +301,69 @@
     	initalizeDescriptionImage(desktopPBDes, desktopPBImage, mobilePBContent, desktopPBDes.length);
     	initializeSelected(desktopPBLine, desktopPBOuterNav, desktopPBInnerNav, desktopPBLine.length);
 
+    	animateWorkContainer();
+	    animateCBSHomeSection();
+	    animateNetEaseHomeSection();
+	    animateHomePBSection();
+
+
+    /**For mobile**/
+    function animateWorkContainer() {
+	    if (percentInViewport("#my-work-container", 50)) {
+	    $('#my-work-container').css("opacity", 1);
+	    $('#my-work-container').addClass("fadeInUp");
+	  }
+	}
+
+	function animateCBSHomeSection() {
+	    if (percentInViewport("#cbs-parallax", 30)) {
+	    $('#cbs-parallax').addClass("fadeInUp");
+	    $('#cbs-parallax').css("opacity", 1);
+	  }
+	  if(percentInViewport("#cbs-section-description", 90)) {
+	    $('#cbs-section-button').addClass("button-reveal");
+	    $('#cbs-section-button').removeClass("button-clipped");
+	  }
+	}
+
+	function animateNetEaseHomeSection() {
+	  if (percentInViewport("#netease-parallax", 30)) {
+	    $('#netease-parallax').addClass("fadeInUp");
+	    $('#netease-parallax').css("opacity", 1);
+	  }
+	  if(percentInViewport("#netease-section-description", 90)) {
+	    $('#netease-section-button').addClass("button-reveal");
+	    $('#netease-section-button').removeClass("button-clipped");
+	  }
+	}
+
+	function animateHomePBSection() {
+	  if ((percentInViewport(".home-pixelberry-section", 20)) && (!desktopPBSeen)) {
+	    desktopPBSeen = true;
+	    animateModule('#desktop-home-pb-content', desktopPBImage, '#desktop-pb-line', 
+	      desktopPBNavLabel, desktopPBLine, desktopPBOuterNav, desktopPBInnerNav, desktopPBNavLabel.length);
+	    animateNavigation(desktopPBNavLabel, desktopPBInnerNav, desktopPBNavLabel.length);
+	    animateNavigationButton('#pb-home-button', desktopPBNavLabel.length);
+	  }
+	}
 
 	/**Helper functions**/
+
+	 // The function returns true when X percent (as a number from 0 to 100) of the element is visible. 
+	 // Only determines if the measurements of the element are visible and not if
+	 // the element is hidden with opacity, visibility etc..
+	function percentInViewport(objectString, percentVisible) {
+	    var el = document.querySelector(objectString);
+	    if (el!=null) {
+	      rect = el.getBoundingClientRect();
+	      windowHeight = (window.innerHeight || document.documentElement.clientHeight);
+	  return !(
+	    Math.floor(100 - (((rect.top >= 0 ? 0 : rect.top) / +-(rect.height / 1)) * 100)) < percentVisible ||
+	    Math.floor(100 - ((rect.bottom - windowHeight) / rect.height) * 100) < percentVisible
+	    )
+	  }
+	}
+
 	function animateIntroHeading(stringHeading, stringBody) {
 		    $(stringHeading).addClass("fadeInUp");
 		    $(stringBody).addClass("fadeInUp");

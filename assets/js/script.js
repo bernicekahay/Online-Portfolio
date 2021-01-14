@@ -128,28 +128,18 @@ var percentage3 = 65;
 })(jQuery);
  
 
+
   $(window).on('load', function() {
+    // animateWorkContainer();
+    // animateCBSHomeSection();
+    // animateNetEaseHomeSection();
+    // animateHomePBSection();
 
-  animateWorkContainer();
-  animateHomePBSection();
-  animateNetEaseHomeSection();
-  animateCBSHomeSection();
+    animateVIPSection();
+    animateLargeCardSection();
+    animateNetEaseSection();
+    animateCBSSection();
 
-  animateVIPSection();
-  animateLargeCardSection();
-  animateNetEaseSection();
-  animateCBSSection();
-  animatePBImage();
-  animateSmallCard();
-  animatePBMore();
-
-  animateNetEaseFlow();
-  animateNetEaseWires();
-  animateNetEaseMore();
-  animateCBSProblemsGoals();
-  animateCBSResearchMethods();
-  animateLearnings();
-  animateLearningsItems();
 });
 
 $(document).scroll(function() {
