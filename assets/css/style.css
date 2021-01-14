@@ -2278,7 +2278,7 @@ a, a:hover, a:active, a:focus, a:link, a:visited {
 }
 
 /*Desktop Navigation*/
-@media all and (min-width: 960px) {
+@media all and (width: 960px) {
 
 	#toggle {
 		display: none;
@@ -2289,10 +2289,7 @@ a, a:hover, a:active, a:focus, a:link, a:visited {
 		flex-direction: row;
 		justify-content: space-around;
 		align-items: flex-end;
-		width: 210px;
-/**For about**/
-/*		width: 290px;
-*/		
+		width: 210px;	
 	}
 
 	.middle-bar-container {
@@ -2531,13 +2528,13 @@ a, a:hover, a:active, a:focus, a:link, a:visited {
 		padding-bottom: 80px;
 	}
 
-	@media all and (min-width: 1100px) {
+	@media all and (width: 1100px) {
 		.desktop-description-wrapper {
 			font-size: 18px;
 		}
 	}
 
-	@media all and (min-width: 1500px) {
+	@media all and (width: 1500px) {
 
 	.section-description-fixed-height {
 		margin-top: 0px;
