@@ -264,7 +264,6 @@
     
 
 <script type = "text/javascript">
-
 	var currentIndexPB = 0;
 	var selectedIndexPB = 0;
 	var desktopPBLine = document.getElementsByClassName('pb-desktop-nav-line');
@@ -275,9 +274,9 @@
 	var desktopPBNavLabel = document.getElementsByClassName('pb-desktop-nav-label');
 	var mobilePBNavLabel = document.getElementsByClassName('pb-mobile-nav-label');
 	var mobilePBContent = document.getElementsByClassName('pb-mobile-content');
-	var desktopPBSeen = false;
 
 	$(window).on('load', function() {
+		var desktopPBSeen = false;
 	    $('.home-featured-banner-container').addClass("fadeIn");
 	    $('.home-featured-banner-container').css("opacity", 1);
 
