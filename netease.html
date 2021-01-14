@@ -420,9 +420,103 @@
 	    initalizeDescriptionImage(desktopNetEaseDes, desktopNetEaseImage, mobileNetEaseContent, desktopNetEaseDes.length);
 	    initializeSelected(desktopNetEaseLine, desktopNetEaseOuterNav, desktopNetEaseInnerNav, desktopNetEaseLine.length);
     	calcStartClip();
+
+    	animateNetEaseSection();
+		animateNetEaseFlow();
+		animateNetEaseWires();
+		animateNetEaseMore();
+
 	});
 
 	/**Helper functions**/
+	 // The function returns true when X percent (as a number from 0 to 100) of the element is visible. 
+	 // Only determines if the measurements of the element are visible and not if
+	 // the element is hidden with opacity, visibility etc..
+	function percentInViewport(objectString, percentVisible) {
+	    var el = document.querySelector(objectString);
+	    if (el!=null) {
+	      rect = el.getBoundingClientRect();
+	      windowHeight = (window.innerHeight || document.documentElement.clientHeight);
+	  return !(
+	    Math.floor(100 - (((rect.top >= 0 ? 0 : rect.top) / +-(rect.height / 1)) * 100)) < percentVisible ||
+	    Math.floor(100 - ((rect.bottom - windowHeight) / rect.height) * 100) < percentVisible
+	    )
+	  }
+	}
+
+	function animateIntroHeading(stringHeading, stringBody) {
+	    $(stringHeading).addClass("fadeInUp");
+	    $(stringBody).addClass("fadeInUp");
+	}
+
+	function animateMoreImages(classImages) {
+	  for (var i = 0; i < classImages.length; i++) {
+	    classImages[i].classList.add("fadeInUpMoreImages");
+	   }
+	}
+
+	function animateNetEaseFlow() {
+	  if ((percentInViewport("#netease-image-background", 20)) && (!NetEaseNavFlowSeen)) {
+	    NetEaseNavFlowSeen = true;
+	    animateIntroHeading('#nav-flow-header', '#nav-flow-description');
+	    animateMoreImages(NetEaseNavFlowImages);
+	  }
+	}
+
+	function animateNetEaseWires() {
+	  if ((percentInViewport("#netease-wires-container", 20)) && (!NetEaseWiresSeen)) {
+	    NetEaseWiresSeen = true;
+	    animateIntroHeading('#netease-wires-header', '#netease-wires-description');
+	  }
+	}
+
+	function animateNetEaseMore() {
+	    if ((percentInViewport("#netease-more-image-container", 20)) && (!NetEaseMoreImagesSeen)) {
+	    NetEaseMoreImagesSeen = true;
+	    animateIntroHeading('#netease-more-header', '#netease-more-description');
+	    animateMoreImages(NetEaseMoreImages);
+	  }
+	}
+
+	function animateModule(desktopContentString, classListImage, desktopLineString, 
+	  classListNavLabel, classListLine, classListOuterNav, classListInnerNav, length) {
+	  $(desktopContentString).addClass("fadeInUp");
+	  classListImage[0].classList.add("reveal");
+	  classListImage[0].classList.add("visible");
+	  setTimeout(function() {
+	    $(desktopLineString).addClass("grow");
+	    classListLine[0].classList.add("visible");
+	    classListOuterNav[0].classList.add("visible");
+	    classListInnerNav[0].classList.add("selected");}, delay);
+	}
+
+	/**Helper function for animateModule(). Animates the inner nav icons popping in and the button. Pairs with initializeLabels.**/
+	function animateNavigation(classListLabel, classNavInner, length) {
+	  for (let i = 0; i < length; i++) {
+	    setTimeout(function(){
+	      classNavInner[i].classList.add('popIn');
+	      classListLabel[i].classList.add('fadeIn');
+	      classListLabel[i].classList.add('visible');
+	    }, delay);
+	    delay += delayAddition;
+	  }
+	  /**Removes the fadein**/
+	  for (let i = 0; i < length; i++) {
+	    setTimeout(function(){
+	      classListLabel[i].classList.remove('fadeIn');
+	    }, delay + (delayAddition * (length + 1)));
+	  }
+	}
+
+	function animateNetEaseSection() {
+	  if ((percentInViewport("#netease-container", 20)) && (!desktopNetEaseSeen)) {
+	    desktopNetEaseSeen = true;
+	    animateModule('#desktop-netease-content', desktopNetEaseImage, '#desktop-netease-line',
+	      desktopNetEaseNavLabel, desktopNetEaseLine, desktopNetEaseOuterNav, desktopNetEaseInnerNav, desktopNetEaseNavLabel.length);
+	    animateNavigation(desktopNetEaseNavLabel, desktopNetEaseInnerNav, desktopNetEaseNavLabel.length);
+	  }
+	}
+
 	function animateIntroHeading(stringHeading, stringBody) {
 		    $(stringHeading).addClass("fadeInUp");
 		    $(stringBody).addClass("fadeInUp");

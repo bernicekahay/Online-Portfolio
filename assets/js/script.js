@@ -137,7 +137,7 @@ var percentage3 = 65;
 
     // animateVIPSection();
     // animateLargeCardSection();
-    animateNetEaseSection();
+    // animateNetEaseSection();
     animateCBSSection();
 
 });
