@@ -573,6 +573,8 @@
 	var percentage1 = 65;
 	var percentage2 = 65;
 	var percentage3 = 65;
+	var delay = 260;
+	var delayAddition = 150;
 
 	$(window).on('load', function() {
 	// Animations for Pixelberry Studios Page
@@ -588,9 +590,75 @@
     initalizeDescriptionImage(desktopLargeCardDes, desktopLargeCardImage, mobileLargeCardContent, desktopLargeCardDes.length);
     initializeSelected(desktopLargeCardLine, desktopLargeCardOuterNav, desktopLargeCardInnerNav, desktopLargeCardLine.length);
     calcStartClip();
+
+    animateVIPSection();
+    animateLargeCardSection();
 	});
 
 	/**Helper functions**/
+	 // The function returns true when X percent (as a number from 0 to 100) of the element is visible. 
+	 // Only determines if the measurements of the element are visible and not if
+	 // the element is hidden with opacity, visibility etc..
+	function percentInViewport(objectString, percentVisible) {
+	    var el = document.querySelector(objectString);
+	    if (el!=null) {
+	      rect = el.getBoundingClientRect();
+	      windowHeight = (window.innerHeight || document.documentElement.clientHeight);
+	  return !(
+	    Math.floor(100 - (((rect.top >= 0 ? 0 : rect.top) / +-(rect.height / 1)) * 100)) < percentVisible ||
+	    Math.floor(100 - ((rect.bottom - windowHeight) / rect.height) * 100) < percentVisible
+	    )
+	  }
+	}
+
+	function animateModule(desktopContentString, classListImage, desktopLineString, 
+	  classListNavLabel, classListLine, classListOuterNav, classListInnerNav, length) {
+	  $(desktopContentString).addClass("fadeInUp");
+	  classListImage[0].classList.add("reveal");
+	  classListImage[0].classList.add("visible");
+	  setTimeout(function() {
+	    $(desktopLineString).addClass("grow");
+	    classListLine[0].classList.add("visible");
+	    classListOuterNav[0].classList.add("visible");
+	    classListInnerNav[0].classList.add("selected");}, delay);
+	}
+
+	/**Helper function for animateModule(). Animates the inner nav icons popping in and the button. Pairs with initializeLabels.**/
+	function animateNavigation(classListLabel, classNavInner, length) {
+	  for (let i = 0; i < length; i++) {
+	    setTimeout(function(){
+	      classNavInner[i].classList.add('popIn');
+	      classListLabel[i].classList.add('fadeIn');
+	      classListLabel[i].classList.add('visible');
+	    }, delay);
+	    delay += delayAddition;
+	  }
+	  /**Removes the fadein**/
+	  for (let i = 0; i < length; i++) {
+	    setTimeout(function(){
+	      classListLabel[i].classList.remove('fadeIn');
+	    }, delay + (delayAddition * (length + 1)));
+	  }
+	}
+
+	function animateVIPSection() {
+	  if ((percentInViewport("#pb-vip-desktop", 20)) && (!desktopVIPSeen)) {
+	    desktopVIPSeen = true;
+	    animateModule('#desktop-vip-content', desktopVIPImage, '#desktop-vip-line',
+	      desktopVIPNavLabel, desktopVIPLine, desktopVIPOuterNav, desktopVIPInnerNav, desktopVIPNavLabel.length);
+	    animateNavigation(desktopVIPNavLabel, desktopVIPInnerNav, desktopVIPNavLabel.length);
+	  }
+	}
+
+	function animateLargeCardSection() {
+	  if ((percentInViewport("#large-card-container", 20)) && (!desktopLargeCardSeen)) {
+	    desktopLargeCardSeen = true;
+	    animateModule('#desktop-large-card-content', desktopLargeCardImage, '#desktop-large-card-line',
+	      desktopLargeCardNavLabel, desktopLargeCardLine, desktopLargeCardOuterNav, desktopLargeCardInnerNav, desktopLargeCardNavLabel.length);
+	    animateNavigation(desktopLargeCardNavLabel, desktopLargeCardInnerNav, desktopLargeCardNavLabel.length);
+	  }
+	}
+
 	function animateIntroHeading(stringHeading, stringBody) {
 		    $(stringHeading).addClass("fadeInUp");
 		    $(stringBody).addClass("fadeInUp");

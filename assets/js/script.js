@@ -135,8 +135,8 @@ var percentage3 = 65;
     // animateNetEaseHomeSection();
     // animateHomePBSection();
 
-    animateVIPSection();
-    animateLargeCardSection();
+    // animateVIPSection();
+    // animateLargeCardSection();
     animateNetEaseSection();
     animateCBSSection();
 
