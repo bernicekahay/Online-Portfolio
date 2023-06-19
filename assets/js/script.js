@@ -31,6 +31,9 @@ var mobileVIPNavLabel = document.getElementsByClassName('vip-mobile-nav-label');
 var mobileVIPContent = document.getElementsByClassName('vip-mobile-content');
 var desktopVIPSeen = false;
 
+/**WWF Page variables**/
+var WWFVerticalCardsSeen = false;
+
 /**Pixelberry Page Variables**/
 var PBImagesSeen = false;
 var SmallCardSeen = false;
@@ -138,14 +141,17 @@ $(document).scroll(function() {
   animateVIPSection();
   animateLargeCardSection();
   animateNetEaseSection();
+  animateWWFSection();
   animateCBSSection();
   animatePBImage();
+  animateVerticalCards();
   animateSmallCard();
   animatePBMore();
 
   animateNetEaseFlow();
   animateNetEaseWires();
   animateNetEaseMore();
+  animateWWFFlow();
   animateCBSProblemsGoals();
   animateCBSResearchMethods();
   animateLearnings();
@@ -268,6 +274,14 @@ function animateNetEaseFlow() {
   }
 }
 
+function animateWWFFlow() {
+  if ((percentInViewport("#wwf-image-background", 20)) && (!NetEaseNavFlowSeen)) {
+    NetEaseNavFlowSeen = true;
+    animateIntroHeading('#nav-flow-header', '#nav-flow-description');
+    animateMoreImages(NetEaseNavFlowImages);
+  }
+}
+
 function animateNetEaseWires() {
   if ((percentInViewport("#netease-wires-container", 20)) && (!NetEaseWiresSeen)) {
     NetEaseWiresSeen = true;
@@ -317,6 +331,21 @@ function animatePBImage() {
   }
 }
 
+  function animateVerticalCards() {
+    if ((percentInViewport(".vertical-card-container", 20)) && (!WWFVerticalCardsSeen)) {
+        $('#vertical-card-1').addClass("fadeInUp");
+        $('#vertical-card-1').css("opacity", 1);
+      setTimeout(function() {
+        $('#vertical-card-2').addClass("fadeInUp");
+        $('#vertical-card-2').css("opacity", 1);
+      setTimeout(function() {
+        $('#vertical-card-3').addClass("fadeInUp");
+        $('#vertical-card-3').css("opacity", 1);
+        }, 130);
+      }, 100);
+    }
+  }
+
 function animateIntroHeading(stringHeading, stringBody) {
     $(stringHeading).addClass("fadeInUp");
     $(stringBody).addClass("fadeInUp");
@@ -358,6 +387,15 @@ function animateLargeCardSection() {
 
 function animateNetEaseSection() {
   if ((percentInViewport("#netease-container", 20)) && (!desktopNetEaseSeen)) {
+    desktopNetEaseSeen = true;
+    animateModule('#desktop-netease-content', desktopNetEaseImage, '#desktop-netease-line',
+      desktopNetEaseNavLabel, desktopNetEaseLine, desktopNetEaseOuterNav, desktopNetEaseInnerNav, desktopNetEaseNavLabel.length);
+    animateNavigation(desktopNetEaseNavLabel, desktopNetEaseInnerNav, desktopNetEaseNavLabel.length);
+  }
+}
+
+function animateWWFSection() {
+  if ((percentInViewport("#wwf-container", 20)) && (!desktopNetEaseSeen)) {
     desktopNetEaseSeen = true;
     animateModule('#desktop-netease-content', desktopNetEaseImage, '#desktop-netease-line',
       desktopNetEaseNavLabel, desktopNetEaseLine, desktopNetEaseOuterNav, desktopNetEaseInnerNav, desktopNetEaseNavLabel.length);

@@ -674,6 +674,8 @@ a, a:hover, a:active, a:focus, a:link, a:visited {
   	animation-fill-mode: forwards;
 }
 
+
+
 #pb-image-left {
 	top: 20px;
 	transform: rotate(-15deg);
@@ -690,6 +692,7 @@ a, a:hover, a:active, a:focus, a:link, a:visited {
 	top: 20px;
 	transform: rotate(15deg);
 }
+
 
 .pixelberry-gradient {
 	width: 100%;
@@ -885,6 +888,12 @@ a, a:hover, a:active, a:focus, a:link, a:visited {
 	background-size: cover;
 }
 
+#wwf-container {
+	background-image: url("../../assets/img/wwf/zynga.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
 #large-card-container {
 	background-image: url("../../assets/img/pixelberry/featured_me_blur.png");
 	background-size: cover;
@@ -903,6 +912,10 @@ a, a:hover, a:active, a:focus, a:link, a:visited {
 
 #netease-mobile {
 	background-image: url("../../assets/img/netease/section_background.png");
+}
+
+#wwf-mobile {
+	background-image: url("../../assets/img/wwf/zynga.png");
 }
 
 #cbs-mobile {
@@ -1005,6 +1018,11 @@ a, a:hover, a:active, a:focus, a:link, a:visited {
 	width: 30%;
 	top: 58%;
 	left: 90%;
+}
+
+#wwf-featured {
+	background-image: url("../../assets/img/wwf/featured.png");
+	background-size: cover;
 }
 
 #netease-featured {
@@ -1463,7 +1481,8 @@ a, a:hover, a:active, a:focus, a:link, a:visited {
 }
 
 .image-background-container {
-	margin-top: 80px;
+	/*	margin-top: 80px;*/
+	margin-top: 3em;
 	width: 100%;
 	height: 900px;
 	background-size: cover;
@@ -1472,6 +1491,30 @@ a, a:hover, a:active, a:focus, a:link, a:visited {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+}
+
+/**This is for the cards on WordsWithFriends section**/
+.vertical-card-container {
+	margin-top: 3em;
+	width: 90%;
+	height: auto;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+  	justify-content: center;
+} 
+
+.vertical-card {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+  	justify-content: center;
+  	opacity: 0;
+}
+
+.vertical-card img{
+	width: 95%;
+	height: 100%;
 }
 
 #nav-flow-header {
@@ -1484,6 +1527,10 @@ a, a:hover, a:active, a:focus, a:link, a:visited {
 
 #netease-image-background {
 	background-image: url("../../assets/img/netease/navigation_flow_background.png");
+}
+
+#wwf-image-background {
+	background-image: url("../../assets/img/wwf/wwf-background.png");
 }
 
 
@@ -1695,7 +1742,7 @@ a, a:hover, a:active, a:focus, a:link, a:visited {
 	background-color: rgba(0, 0, 0, 0.3);
 }
 
-/*To give padding to the last navifation tab.*/
+/*To give padding to the last navigation tab.*/
 .home-gradient-one .mobile-horizontal-item:last-child {
 	margin-right: 10%;
 }
@@ -1969,6 +2016,8 @@ a, a:hover, a:active, a:focus, a:link, a:visited {
 }
 
 .desktop-section-description {
+	width:  100%;
+	height:  100%;
 	overflow: hidden;
 	opacity: 0;
 }
