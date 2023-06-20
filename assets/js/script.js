@@ -18,6 +18,19 @@ var mobilePBNavLabel = document.getElementsByClassName('pb-mobile-nav-label');
 var mobilePBContent = document.getElementsByClassName('pb-mobile-content');
 var desktopPBSeen = false;
 
+/**Words With Friends Module variables**/
+  var currentIndexWWF = 0;
+  var selectedIndexWWF = 0;
+  var desktopWWFLine = document.getElementsByClassName('wwf-desktop-nav-line');
+  var desktopWWFOuterNav = document.getElementsByClassName('wwf-nav-outer');
+  var desktopWWFInnerNav = document.getElementsByClassName('wwf-nav-inner');
+  var desktopWWFDes = document.getElementsByClassName('wwf-desktop-description');
+  var desktopWWFImage = document.getElementsByClassName('wwf-desktop-image');
+  var desktopWWFNavLabel = document.getElementsByClassName('wwf-desktop-nav-label');
+  var mobileWWFNavLabel = document.getElementsByClassName('wwf-mobile-nav-label');
+  var mobileWWFContent = document.getElementsByClassName('wwf-mobile-content');
+  var desktopWWFSeen = false;
+
 /**PB VIP variables**/
 var currentIndexVIP = 0;
 var selectedIndexVIP = 0;
@@ -135,6 +148,7 @@ $(document).scroll(function() {
   /**Animating index sections that come in.**/
   animateWorkContainer();
   animateHomePBSection();
+  animateWWFHomeSection();
   animateNetEaseHomeSection();
   animateCBSHomeSection();
 
@@ -331,6 +345,7 @@ function animatePBImage() {
   }
 }
 
+/**Animating the Words With Friends vertical cards**/
   function animateVerticalCards() {
     if ((percentInViewport(".vertical-card-container", 20)) && (!WWFVerticalCardsSeen)) {
         $('#vertical-card-1').addClass("fadeInUp");
@@ -366,6 +381,16 @@ function animateHomePBSection() {
     animateNavigationButton('#pb-home-button', desktopPBNavLabel.length);
   }
 }
+
+  function animateWWFHomeSection() {
+   if ((percentInViewport(".home-wwf-section", 20)) && (!desktopWWFSeen)) {
+      desktopWWFSeen = true;
+      animateModule('#desktop-home-wwf-content', desktopWWFImage, '#desktop-wwf-line', 
+        desktopWWFNavLabel, desktopWWFLine, desktopWWFOuterNav, desktopWWFInnerNav, desktopWWFNavLabel.length);
+      animateNavigation(desktopWWFNavLabel, desktopWWFInnerNav, desktopWWFNavLabel.length);
+      animateNavigationButton('#wwf-home-button', desktopWWFNavLabel.length);
+    }
+  }
 
 function animateVIPSection() {
   if ((percentInViewport("#pb-vip-desktop", 20)) && (!desktopVIPSeen)) {
@@ -450,17 +475,17 @@ function animateNavigationButton(buttonID, length) {
   }, delayAddition * (length+3));
 }
 
-function initializeLabels(classListDesktop, classListMobile, length) {
-  for (var i = 0; i < length; i++) {
-    if (i == 0) {
-      classListDesktop[i].classList.add("selected");
-      classListMobile[i].classList.add("selected");
-    } else {
-      classListDesktop[i].classList.add("deselected");
-      classListMobile[i].classList.add("deselected");
-    }
-  }
-}
+// function initializeLabels(classListDesktop, classListMobile, length) {
+//   for (var i = 0; i < length; i++) {
+//     if (i == 0) {
+//       classListDesktop[i].classList.add("selected");
+//       classListMobile[i].classList.add("selected");
+//     } else {
+//       classListDesktop[i].classList.add("deselected");
+//       classListMobile[i].classList.add("deselected");
+//     }
+//   }
+// }
 
 
 function animateCBSHomeSection() {
@@ -485,7 +510,7 @@ function animateNetEaseHomeSection() {
   }
 }
 
-/**Controls hover effect for the navitation labels.**/
+/**Controls hover effect for the navigation labels.**/
 function addLabelHover(classNavLabel, index) {
   classNavLabel[index].classList.add('leftright');
   classNavLabel[index].classList.add('topdown');
@@ -505,7 +530,7 @@ function removeInnerHover(classNavInner, index) {
 }
 
 //cancel hover effect if it's selected
-/**Hover function in the navigation label**/
+/**Hover function in the navigation label for PB home**/
 $('.pb-desktop-nav-label, .pb-nav-inner').hover(function() {
   if (!($(this).hasClass('selected'))) {
     if ($(this).hasClass('pb-desktop-nav-label')) {
@@ -525,6 +550,29 @@ $('.pb-desktop-nav-label, .pb-nav-inner').hover(function() {
     }
     removeLabelHover(desktopPBNavLabel, index);
     removeInnerHover(desktopPBInnerNav, index);
+  }}
+);
+
+/**Hover function in the navigation label for Words With Friends**/
+$('.wwf-desktop-nav-label, .wwf-nav-inner').hover(function() {
+  if (!($(this).hasClass('selected'))) {
+    if ($(this).hasClass('wwf-desktop-nav-label')) {
+      index = $(this).parent().index();
+    } else if ($(this).hasClass('wwf-nav-inner')) {
+      index = $(this).parent().parent().index();
+    }
+    addLabelHover(desktopWWFNavLabel, index);
+    addInnerHover(desktopWWFInnerNav, index);
+  }},
+  function() {
+    if (!($(this).hasClass('selected'))) {
+    if ($(this).hasClass('wwf-desktop-nav-label')) {
+      index = $(this).parent().index();
+    } else if ($(this).hasClass('wwf-nav-inner')) {
+      index = $(this).parent().parent().index();
+    }
+    removeLabelHover(desktopWWFNavLabel, index);
+    removeInnerHover(desktopWWFInnerNav, index);
   }}
 );
 
@@ -807,6 +855,25 @@ $('.pb-nav-tab, .pb-desktop-nav-label, .pb-mobile-nav-label').click(function() {
     currentIndexPB = selectedIndexPB;
 })
 
+/**Selecting the WWF navigation on the home page.**/
+$('.wwf-nav-tab, .wwf-desktop-nav-label, .wwf-mobile-nav-label').click(function() {
+    if ($(this).hasClass('mobile-horizontal-item')) {
+      selectedIndexWWF = $(this).index();
+    } else {
+      selectedIndexWWF = $(this).parent().index();
+    }
+    if (selectedIndexWWF != currentIndexWWF) {
+      var length = desktopWWFDes.length;
+      changeMobileTabs(mobileWWFNavLabel, length, selectedIndexWWF);
+      changeMobileContent(mobileWWFContent, currentIndexWWF, selectedIndexWWF);
+      changeDesktopSelected(desktopWWFLine, desktopWWFOuterNav, desktopWWFInnerNav, length, selectedIndexWWF);
+      changeDesktopLabel(desktopWWFNavLabel, length, selectedIndexWWF);
+      changeDesktopDes(desktopWWFDes, currentIndexWWF, selectedIndexWWF);
+      changeDesktopImage(desktopWWFImage, currentIndexWWF, selectedIndexWWF);
+    }
+    currentIndexWWF = selectedIndexWWF;
+})
+
 /**Selecting the VIP navigation on the pixelberry page.**/
 $('.vip-nav-tab, .vip-desktop-nav-label, .vip-mobile-nav-label').click(function() {
   if ($(this).hasClass('mobile-horizontal-item')) {
@@ -908,8 +975,6 @@ function changeMobileTabs(classListLabel, length, selectedIndex) {
     }
   }
 }
-
-
 
 function changeDesktopDes(classListDes, currentIndex, selectedIndex) {
   //hide the current content

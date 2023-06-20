@@ -360,6 +360,10 @@ a, a:hover, a:active, a:focus, a:link, a:visited {
 	font-weight: 500;
 }
 
+.logo:hover{
+	cursor: pointer;
+}
+
 .right-bar-container {
 	flex: 1;
 	display: flex;
@@ -1446,6 +1450,7 @@ a, a:hover, a:active, a:focus, a:link, a:visited {
 
 #my-work-container {
 	opacity: 0;
+	margin-bottom: 10px;
 }
 
 .general-video-container {
@@ -1635,7 +1640,6 @@ a, a:hover, a:active, a:focus, a:link, a:visited {
 }
 
 .home-pixelberry-section {
-	margin: 0 auto;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -1645,9 +1649,19 @@ a, a:hover, a:active, a:focus, a:link, a:visited {
 	overflow: auto;
 }
 
-#home-pb-desktop {
+.home-wwf-section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	width: 100%;
+	overflow: auto;
+}
+
+.home-background {
 	display: none;
-	margin-top: 30px;
+	margin-top: 0.5%;
 	padding-top: 80px;
 	padding-bottom: 80px;
 }
@@ -1859,7 +1873,7 @@ a, a:hover, a:active, a:focus, a:link, a:visited {
 }
 
 #home-pb-mobile{
-	margin-top: 40px;
+	margin-top: 1%;
 	padding-top: 100px;
 	padding-bottom: 70px;
 	width: 100%;
@@ -1869,11 +1883,22 @@ a, a:hover, a:active, a:focus, a:link, a:visited {
 	background-attachment: fixed;
 }
 
-#home-pb-desktop {
+#home-wwf-mobile{
+	margin-top: 1%;
+	padding-top: 100px;
+	padding-bottom: 70px;
+	width: 100%;
+	overflow: auto;
+	background-image: url("../../assets/img/wwf/home.png");
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+.home-background {
 	display: none;
 }
 
-.home-pb-desktop-gradient {
+.home-background-gradient {
 	background: radial-gradient(rgba(1, 1, 1, 0.3) 0%, rgba(1, 1, 1, 0.3) 30%,  rgba(1, 1, 1, 0.3) 50%, rgba(1, 1, 1, 0.2) 60%, rgba(1, 1, 1, 0) 70%);
 }
 
@@ -2155,7 +2180,7 @@ a, a:hover, a:active, a:focus, a:link, a:visited {
 	background-color: #DCDCDC;
 }
 
-.desktop-nav-inner.hover{
+.desktop-nav-inner.hover {
 	transform: scale(1.1);
 	background-color: white;
 }
@@ -2295,6 +2320,11 @@ a, a:hover, a:active, a:focus, a:link, a:visited {
 	margin-top: 20px;
 }
 
+#wwf-home-button {
+	margin: 0;
+	margin-top: 20px;
+}
+
 .footer {
 	background-color: #F4F4F4;
 	height: 60px;
@@ -2309,7 +2339,7 @@ a, a:hover, a:active, a:focus, a:link, a:visited {
 	background-size: cover;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
-	margin-top: 40px;
+	margin-top: 1%;
 	padding-top: 100px;
 	padding-bottom: 70px;
 	width: 100%;
@@ -2374,13 +2404,21 @@ a, a:hover, a:active, a:focus, a:link, a:visited {
 		display: none;
 	}
 
-	#home-pb-desktop {
+	.home-background {
 		display: flex;
-		background-image: url("../../assets/img/pixelberry/pb.png");
 		background-size: cover;
 		background-position: center;
 		background-attachment: fixed;
 	}
+
+	#home-pb-desktop {
+		background-image: url("../../assets/img/pixelberry/pb.png");
+	}
+
+	#home-wwf-desktop {
+		background-image: url("../../assets/img/wwf/home.png");
+	}
+
 
 	.home-gradient-two {
 		height: 750px;
